@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #064E3B;
+  --color-primary-dark: #022C22;
+  --color-primary-light: #059669;
+  
+  --color-secondary: #0F172A;
+  --color-secondary-light: #1E293B;
+  
+  --color-accent: #D4AF37;
+  --color-accent-light: #FDE047;
+  --color-accent-muted: #FDE68A;
+  
+  --color-surface: #FDFBF7;
+  --color-surface-alt: #F8FAFC;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-arabic: "Amiri Quran", serif;
+
+  --shadow-premium: 0 10px 40px -10px rgba(0,0,0,0.08);
+  --shadow-premium-hover: 0 20px 40px -10px rgba(0,0,0,0.12);
+}
+
+@layer base {
+  .glass-nav {
+    background: rgba(253, 251, 247, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+  }
+  
+  .nav-scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #064E3B;
+    transition: width 0.3s ease;
+  }
+  .nav-link.active::after {
+    width: 100%;
+  }
+  .nav-link.active {
+    color: #064E3B;
+    font-weight: 600;
+  }
+
+  .hero-pattern {
+    background-image: radial-gradient(rgba(6, 78, 59, 0.05) 2px, transparent 2px);
+    background-size: 30px 30px;
+  }
+
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  
+  .animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+    will-change: transform;
+  }
+}
+
+@layer utilities {
+  .delay-100 { transition-delay: 100ms; }
+  .delay-200 { transition-delay: 200ms; }
+  .delay-300 { transition-delay: 300ms; }
+  .delay-400 { transition-delay: 400ms; }
+}
+
+#mobile-menu {
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease-in-out;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  will-change: max-height, opacity;
+}
+#mobile-menu.open {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.accordion-content {
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  will-change: max-height, opacity;
+}
+
+.accordion-content.active {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.accordion-icon {
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  body { padding-bottom: 80px; }
+}

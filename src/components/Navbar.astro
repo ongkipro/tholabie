@@ -1,0 +1,84 @@
+---
+import { Menu, X } from '@lucide/astro';
+
+const navLinks = [
+  { name: 'Tentang Kami', href: '#tentang', id: 'tentang' },
+  { name: 'Program Beasiswa', href: '#beasiswa', id: 'beasiswa' },
+  { name: 'Kehidupan Asrama', href: '#asrama', id: 'asrama' },
+  { name: 'Keahlian Digital', href: '#keahlian', id: 'keahlian' },
+  { name: 'Testimoni', href: '#testimoni', id: 'testimoni' },
+];
+---
+<header
+  id="navbar"
+  class="fixed w-full top-0 z-50 transition-all duration-300 glass-nav py-4"
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center">
+      <a href="#" class="flex items-center gap-2 group">
+        <img
+          src="/img/logo.webp"
+          alt="Logo Pondok Pesantren THOLABIE CIBS"
+          class="w-10 h-10 object-contain rounded-full shadow-md group-hover:opacity-80 transition-opacity"
+        />
+        <div class="flex flex-col">
+          <span class="font-serif font-bold text-lg leading-none text-primary">THOLABIE</span>
+          <span class="text-[10px] tracking-widest text-secondary uppercase font-medium mt-1">CIBS</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex space-x-8 items-center">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="nav-link text-sm font-medium text-secondary hover:text-primary transition-colors"
+            data-link={link.id}
+          >
+            {link.name}
+          </a>
+        ))}
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <a
+          href="https://wa.me/6285183003060"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden md:inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-semibold rounded-full text-primary-dark bg-accent hover:bg-accent-light transition-all shadow-sm hover:shadow-md"
+        >
+          Daftar Sekarang
+        </a>
+        <button
+          id="mobile-menu-btn"
+          aria-label="Toggle Menu"
+          class="md:hidden p-2 text-secondary hover:text-primary transition-colors focus:outline-none"
+        >
+          <Menu class="w-6 h-6 open-icon" />
+          <X class="w-6 h-6 close-icon hidden" />
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl"
+  >
+    <div class="px-4 pt-2 pb-6 space-y-1">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="mobile-nav-link block px-3 py-3 text-base font-medium text-secondary hover:bg-surface-alt hover:text-primary rounded-md transition-colors"
+        >
+          {link.name}
+        </a>
+      ))}
+      <a
+        href="#faq"
+        class="mobile-nav-link block px-3 py-3 text-base font-medium text-secondary hover:bg-surface-alt hover:text-primary rounded-md transition-colors"
+      >
+        FAQ
+      </a>
+    </div>
+  </div>
+</header>
