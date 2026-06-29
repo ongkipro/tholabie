@@ -1,9 +1,10 @@
 # 🕌 Pondok Pesantren THOLABIE CIBS — Website Resmi (Astro Version)
 
+[![Developer](https://img.shields.io/badge/Developer-ongki.pro-064E3B?style=for-the-badge&logo=github&logoColor=white)](https://ongki.pro)
+[![AI Co-Developer](https://img.shields.io/badge/AI--Partner-Antigravity%20(DeepMind)-blue?style=for-the-badge&logo=google-gemini&logoColor=white)](https://deepmind.google/)
 [![Astro](https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build/)
 [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
-[![Repository](https://img.shields.io/badge/GitHub-Public-brightgreen?style=for-the-badge&logo=github)](https://github.com/ongkipro/tholabie)
 
 ---
 
@@ -13,6 +14,7 @@
     <b>مَا شَاءَ اللَّهُ لَا قُوَّةَ إِلَّا بِاللَّهِ</b>
   </p>
   <p><i>Semoga website ini menjadi wasilah kebaikan, ilmu yang bermanfaat, dan amal jariyah bagi semua yang terlibat. Aamiin.</i></p>
+  <p>🤲 <b>GRATIS</b> untuk pondok pesantren, masjid, TPQ, madrasah & lembaga dakwah — sebagai bentuk khidmah dan amal jariyah. Lillāhi ta'ālā.</p>
 </div>
 
 ---
