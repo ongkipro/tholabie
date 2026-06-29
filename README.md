@@ -1,60 +1,116 @@
-# Pondok Pesantren THOLABIE CIBS Landing Page (Astro Version)
+# 🕌 Pondok Pesantren THOLABIE CIBS — Website Resmi (Astro Version)
 
-Repositori ini berisi kode sumber untuk landing page resmi **Pondok Pesantren THOLABIE Classic International Boarding School (CIBS) Malang** yang telah di-porting sepenuhnya dari React/Vite ke **Astro**.
+[![Astro](https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build/)
+[![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+[![Repository](https://img.shields.io/badge/GitHub-Public-brightgreen?style=for-the-badge&logo=github)](https://github.com/ongkipro/tholabie)
 
-Situs ini berfungsi untuk menginformasikan program penerimaan santri beasiswa kuliah berasrama D3 kerja sama resmi dengan **Politeknik Kota Malang**.
+Repositori ini berisi kode sumber resmi untuk website company profile **Pondok Pesantren THOLABIE Classic International Boarding School (CIBS) Malang** yang dibangun menggunakan framework modern **Astro** terintegrasi dengan **Tailwind CSS v4**.
+
+Situs ini dirancang khusus untuk menyajikan program beasiswa penuh kuliah 3 tahun D3 Politeknik Kota Malang dan inkubasi keahlian digital bagi santri berprestasi dari seluruh Indonesia.
+
+---
+
+## 🚀 Fitur Website Utama
+
+1. **Arsitektur Multi-Page Terpadu:** Terbagi secara modular menjadi 6 halaman inti:
+   * **Beranda (`/`):** Ringkasan nilai, keunggulan, snapshot asrama, dan testimoni alumni.
+   * **Profil (`/tentang`):** Sejarah pondok, visi & misi, dewan pembina, serta 5 nilai dasar santri.
+   * **Beasiswa (`/beasiswa`):** Rincian beasiswa D3 penuh, kriteria kelayakan, dan alur pendaftaran seleksi.
+   * **Asrama (`/asrama`):** Rutinitas ritme harian santri (dari Qiyamul Lail hingga inkubasi), fasilitas asrama, dan galeri dokumentasi.
+   * **Kurikulum (`/kurikulum`):** Pembahasan 4 pilar keahlian digital (AI, Pemasaran Digital, Toko Online, Desain) dan *soft skills*.
+   * **Hubungi Kami (`/kontak`):** Alamat resmi, peta interaktif, jam operasional, saluran WhatsApp, dan tanya jawab lengkap (FAQ).
+2. **Kanal Blog Interaktif (`/blog`):** Dilengkapi dengan halaman index blog dan detail artikel dinamis berdaya jangkau luas untuk menyajikan berita, tips pendidikan, dan literasi teknologi digital bagi santri.
+3. **Navigasi Mobile Floating Glass Card:** Tombol menu burger melingkar kaca (*glass circle*) dengan animasi morphing 3-garis murni, serta menu dropdown melayang (*floating rounded-2xl glass card*) dengan chevrons dinamis.
+4. **Navigasi Rekam Jejak (Breadcrumbs):** Elemen navigasi kapsul transparan visual (Beranda • Nama Sub-halaman) di atas header sub-halaman untuk mempermudah navigasi balik.
+5. **Optimasi SEO & Kecepatan Akses:**
+   * **Tag Meta Dinamis:** Canonical URL, properti sosial Open Graph (Facebook), dan Twitter Card ter-generate dinamis berbasis jalur URL sub-halaman saat ini.
+   * **Unique Meta Descriptions:** Menghilangkan warning duplikasi deskripsi di mata robot pencari Google.
+   * **JSON-LD Structured Data:** Skema terstruktur untuk `School` (profil sekolah) dan `BreadcrumbList` (rekam jejak penelusuran) guna menaikkan *rich snippets* di hasil pencarian.
+   * **Sitemap Dinamis (`sitemap.xml`):** Pendaftaran otomatis ke-6 sub-halaman utama dan indeks blog secara tertib.
+   * **Preloading Aset:** Prioritas muat untuk gambar Visual Hero untuk memangkas metrik LCP (Largest Contentful Paint).
 
 ---
 
 ## 🛠️ Tech Stack & Konfigurasi
-Proyek ini dibangun menggunakan teknologi modern yang sangat optimal untuk website berbasis performa tinggi (static-first):
-* **Framework:** [Astro](https://astro.build/) (v7.x)
-* **Styling (CSS):** [Tailwind CSS v4](https://tailwindcss.com/) (menggunakan `@tailwindcss/vite` plugin lokal)
-* **Icon Library:** [@lucide/astro](https://lucide.dev/) (menggunakan SVG native yang sangat ringan)
-* **Deployment Adapter:** [@astrojs/vercel](https://docs.astro.build/en/guides/deploy/vercel/) (siap dideploy ke Vercel Serverless/Static)
+
+| Teknologi | Versi / Paket | Deskripsi / Peran |
+| :--- | :--- | :--- |
+| **Framework** | [Astro](https://astro.build/) (v7.x) | Static-first, Zero JS default, HTML-first templating |
+| **Styling** | [Tailwind CSS v4](https://tailwindcss.com/) | `@tailwindcss/vite` plugin, custom theme variables |
+| **Icons** | [@lucide/astro](https://lucide.dev/) | SVG native icon set, sangat ringan tanpa beban DOM |
+| **Adapter** | [@astrojs/vercel](https://vercel.com/) | Integrasi Vercel deployment serverless & static asset hosting |
+| **Tipografi** | Plus Jakarta Sans | Google Fonts ter-preconnect untuk rendering super mulus |
 
 ---
 
-## 🚀 Fitur Website
-1. **Performa LCP Teroptimasi:** Preloading gambar visual utama (`pondok-pesantren-tholabie-malang-cibs.webp`) untuk waktu pemuatan awal yang instan.
-2. **Lazy Loading Aset:** Pemuatan gambar di bawah lipatan halaman menggunakan `loading="lazy"` dan `decoding="async"` guna meminimalkan bandwidth.
-3. **Glassmorphic Navigation:** Navbar transparan dengan efek blur latar belakang yang menyusut dan solid saat digulirkan.
-4. **Accordion FAQ:** Tanya jawab interaktif yang dikendalikan dengan vanilla Javascript berkinerja tinggi.
-5. **Scroll Animation:** Efek kemunculan elemen secara halus saat halaman digulirkan menggunakan browser `IntersectionObserver`.
-6. **Mobile Friendly:** Responsivitas total dari mobile terkecil hingga desktop lebar dengan sticky WhatsApp CTA.
+## 📁 Struktur Direktori Utama
 
----
-
-## 🧞 Perintah Dasar (Development)
-
-Semua perintah dijalankan di dalam direktori root proyek menggunakan terminal:
-
-| Perintah | Deskripsi |
-| :--- | :--- |
-| `npm install` | Menginstal seluruh dependensi lokal proyek |
-| `npm run dev` | Menjalankan server lokal di `http://localhost:4321` |
-| `npm run build` | Melakukan kompilasi produksi ke folder `./dist/` |
-| `npm run preview` | Meninjau hasil kompilasi produksi secara lokal |
-
----
-
-## 📁 Struktur Direktori
 ```text
 /
-├── public/                  # Aset statis (Favicons, Robots.txt, Sitemap, Manifest)
-│   ├── img/                 # Folder gambar logo dan dokumentasi asli
-│   └── site.webmanifest     # Manifest aplikasi web untuk PWA
+├── public/                      # Aset statis global
+│   ├── img/                     # Folder logo dan aset visual testimonial terkompresi
+│   ├── favicon.ico / .svg       # Favicon supersampling resolusi tinggi
+│   ├── robots.txt               # Aturan akses robot crawler
+│   ├── sitemap.xml              # Peta situs terindeks Google
+│   └── site.webmanifest         # Manifest metadata PWA
 ├── src/
-│   ├── components/          # 17 Komponen mandiri Astro (Navbar, Hero, FAQ, dll.)
+│   ├── components/              # Komponen terbagi
+│   │   ├── sections/            # 14 Blok section homepage modular (Hero, About, dll.)
+│   │   ├── Ornament.astro       # Garis ornamen Islami pemisah section
+│   │   ├── Navbar.astro         # Navigasi atas dengan pendeteksi tautan aktif & burger menu
+│   │   ├── Footer.astro         # Kaki halaman terintegrasi dengan peta situs & hak cipta
+│   │   └── StickyCTA.astro      # Tombol melayang cepat pendaftaran via WhatsApp
+│   ├── layouts/
+│   │   └── Layout.astro         # Template dasar HTML, dynamic SEO meta, dan JSON-LD
 │   ├── pages/
-│   │   └── index.astro      # Halaman utama landing page & script client-side
+│   │   ├── blog/                # Fitur blog terintegrasi
+│   │   │   ├── index.astro      # Indeks daftar artikel blog
+│   │   │   └── [slug].astro     # Detail bacaan postingan blog dinamis
+│   │   ├── index.astro          # Halaman beranda
+│   │   ├── tentang.astro        # Halaman Profil
+│   │   ├── beasiswa.astro       # Halaman Program Beasiswa
+│   │   ├── asrama.astro         # Halaman Kehidupan Asrama
+│   │   ├── kurikulum.astro      # Halaman Kurikulum Digital
+│   │   └── kontak.astro         # Halaman Hubungi Kami & FAQ
 │   └── styles/
-│       └── global.css       # File style global, deklarasi @theme Tailwind v4
-├── astro.config.mjs         # Konfigurasi Astro (Vite, Tailwind, Vercel Adapter)
-└── package.json             # Dependensi proyek
+│       └── global.css           # Styling global, skema warna Kiswah & variabel custom
+├── astro.config.mjs             # Konfigurasi Vercel adapter & plugin Vite
+└── package.json                 # Dependensi Node.js
 ```
 
 ---
 
-## 🤝 Lisensi & Kontributor
-Situs web ini dikembangkan secara profesional oleh **[ongki.pro](https://ongki.pro)**. Hak cipta dilindungi oleh **Pondok Pesantren THOLABIE CIBS**.
+## 🧞 Perintah Dasar Pengembangan
+
+Jalankan perintah ini di dalam direktori root proyek melalui terminal:
+
+```bash
+# Menginstal seluruh dependensi lokal proyek
+npm install
+
+# Menjalankan server pengembangan lokal (akses di http://localhost:4321)
+npm run dev
+
+# Melakukan kompilasi produksi ke folder static ./dist/
+npm run build
+
+# Meninjau hasil kompilasi produksi secara lokal
+npm run preview
+```
+
+---
+
+## 🤝 Lisensi & Pengembang
+
+Website ini dikembangkan secara profesional dan dipublikasikan ke publik oleh:
+
+### 👤 Pengembang Utama (Developer Credentials)
+* **Lead Engineer:** **Paduka Ongki — [ongki.pro](https://ongki.pro)**
+* **Kontak Kerja:** `halo@ongki.pro`
+* **Jasa:** Solusi Web Premium, Konsultan TI, & Transformasi Digital.
+
+### 🤖 AI Co-Developer Partner
+* **Antigravity (Google DeepMind Team):** Agen kecerdasan buatan kelas premium yang bertugas mengarsiteki dinamika multi-page, merancang optimasi performa LCP, integrasi metadata SEO, dan visualisasi layout kaca (*glassmorphic CSS*).
+
+*Hak Cipta dilindungi undang-undang. Dimiliki secara resmi oleh **Pondok Pesantren THOLABIE Classic International Boarding School (CIBS) Malang**.*
