@@ -1,0 +1,70 @@
+---
+import { ChevronDown } from '@lucide/astro';
+import Ornament from '../Ornament.astro';
+
+const faqs = [
+  {
+    q: 'Apakah beasiswa ini menanggung 100% biaya kuliah?',
+    a: 'Ya, beasiswa THOLABIE CIBS menanggung 100% biaya kuliah (Uang Kuliah Tunggal/UKT) selama 3 tahun penuh (6 semester) untuk program studi D3 di Politeknik Kota Malang.',
+  },
+  {
+    q: 'Apakah biaya asrama dan makan sehari-hari juga gratis?',
+    a: 'Ya, seluruh fasilitas tempat tinggal di asrama dan makan harian santri disediakan secara gratis tanpa dipungut biaya apa pun agar santri dapat fokus belajar.',
+  },
+  {
+    q: 'Siapa saja yang berhak mendaftar program beasiswa ini?',
+    a: 'Program ini terbuka untuk lulusan SMA, SMK, MA, atau sederajat (termasuk lulusan pesantren) dengan usia maksimal 21 tahun, berasal dari keluarga prasejahtera (kurang mampu secara ekonomi), dan memiliki komitmen tinggi untuk belajar.',
+  },
+  {
+    q: 'Apakah program ini cocok untuk lulusan pesantren/keagamaan?',
+    a: 'Sangat cocok. Kurikulum kami memadukan biah shalihah (lingkungan Islami, kajian adab, aqidah, tahfidz) dengan sains modern dan keahlian IT, sehingga lulusan pesantren dapat menguasai keahlian digital tanpa kehilangan nilai-nilai kesantrian.',
+  },
+  {
+    q: 'Bagaimana dengan kepemilikan laptop dan smartphone pribadi?',
+    a: 'Santri sangat disarankan membawa laptop pribadi untuk menunjang kelas praktek keahlian digital. Smartphone diperbolehkan namun waktu penggunaannya akan diatur secara tertib oleh pengasuh asrama agar tidak mengganggu ibadah dan belajar.',
+  },
+  {
+    q: 'Apakah ada ikatan dinas setelah lulus program?',
+    a: 'Tidak ada ikatan dinas yang mengekang atau keharusan ganti rugi biaya pendidikan. Namun, kami berkomitmen menyalurkan alumni terbaik ke jaringan perusahaan mitra digital kami agar mereka dapat langsung berkarya secara profesional.',
+  },
+  {
+    q: 'Bagaimana biaya untuk kebutuhan pribadi santri?',
+    a: 'Makan dan asrama gratis, namun kebutuhan pribadi mandiri seperti perlengkapan mandi, pakaian, obat-obatan khusus pribadi, dan uang saku harian menjadi tanggung jawab santri atau keluarga masing-masing.',
+  },
+  {
+    q: 'Apakah pendaftar dari luar Kota Malang diperbolehkan?',
+    a: 'Tentu saja. Beasiswa ini terbuka untuk pemuda Muslim dari seluruh wilayah di Indonesia yang siap merantau dan menetap di asrama kami yang berlokasi di Kota Malang, Jawa Timur.',
+  },
+  {
+    q: 'Bagaimana alur pendaftaran resmi program ini?',
+    a: 'Silakan klik tombol pendaftaran WhatsApp di website ini untuk menghubungi admin penerimaan kami. Admin akan memandu pengumpulan berkas berkas administratif (ijazah, KK, SKTM) dan menjadwalkan tes seleksi wawancara online.',
+  },
+];
+---
+<section id="faq" class="py-16 md:py-24 bg-surface relative overflow-hidden">
+  <div class="absolute inset-0 bg-islamic-pattern opacity-40 -z-10"></div>
+  
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center mb-12 animate-on-scroll">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-secondary mb-4 text-center">Pertanyaan yang Sering Diajukan</h2>
+      <Ornament type="divider" class="mb-4" />
+    </div>
+
+    <div class="space-y-4">
+      {faqs.map((faq) => (
+        <div class="animate-on-scroll border border-accent/15 rounded-2xl overflow-hidden bg-white shadow-premium">
+          <button
+            class="accordion-button w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none cursor-pointer group"
+            aria-expanded="false"
+          >
+            <span class="font-bold text-secondary text-sm md:text-base group-hover:text-primary transition-colors">{faq.q}</span>
+            <ChevronDown class="w-5 h-5 text-accent accordion-icon transition-transform shrink-0 ml-4" />
+          </button>
+          <div class="accordion-content px-6 bg-white transition-all duration-300">
+            <p class="pt-2 pb-5 text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

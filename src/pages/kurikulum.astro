@@ -1,0 +1,178 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Ornament from '../components/Ornament.astro';
+import FinalCTA from '../components/sections/FinalCTA.astro';
+import { Laptop, Code, Megaphone, Terminal, Cpu, Users, GraduationCap, Compass, Briefcase, BookOpen, Clock } from '@lucide/astro';
+
+const digitalModules = [
+  {
+    icon: Megaphone,
+    title: 'Digital Marketing & SEO',
+    desc: 'Mempelajari riset kata kunci, penulisan copywriting persuasif, taktik SEO halaman, optimasi Google Bisnisku, serta cara menjalankan iklan berbayar (Facebook & Google Ads) secara efisien.',
+  },
+  {
+    icon: Terminal,
+    title: 'AI untuk Produktivitas',
+    desc: 'Penguasaan teknik prompt engineering untuk ChatGPT, Gemini, Claude, pemanfaatan Midjourney/DALL-E untuk konten grafis cepat, serta otomatisasi pekerjaan harian menggunakan kecerdasan buatan.',
+  },
+  {
+    icon: Laptop,
+    title: 'E-Commerce & Toko Online',
+    desc: 'Langkah membangun toko online di platform lokal/internasional, integrasi WhatsApp checkout, manajemen inventori produk, strategi pengiriman barang, dan penanganan layanan pelanggan.',
+  },
+  {
+    icon: Code,
+    title: 'Desain Grafis & Video Editing',
+    desc: 'Kelas visual menggunakan Canva, Figma, dan edit video dinamis dengan CapCut serta Adobe Premiere. Menyiapkan materi visual yang memikat audiens media sosial modern.',
+  },
+];
+
+const lifeSkills = [
+  {
+    icon: Users,
+    title: 'Public Speaking & Komunikasi',
+    desc: 'Melatih kemampuan berbicara di depan umum secara sistematis, teknik presentasi bisnis, negosiasi, dan cara berkomunikasi secara sopan dengan adab Islami.',
+  },
+  {
+    icon: Compass,
+    title: 'Kepemimpinan & Organisasi',
+    desc: 'Dasar-dasar kepemimpinan, manajemen organisasi kelompok, delegasi tugas, penyelesaian konflik secara damai, serta tanggung jawab sosial.',
+  },
+  {
+    icon: Briefcase,
+    title: 'Kewirausahaan & Bisnis',
+    desc: 'Membangun mentalitas wirausaha tangguh, mengenali peluang usaha baru, perencanaan keuangan pribadi/bisnis sederhana, dan etika bisnis syariah.',
+  },
+];
+---
+
+<Layout title="Kurikulum Keahlian Digital & Life Skills | Pondok Pesantren THOLABIE CIBS" description="Kurikulum inkubasi keahlian digital & soft skills di THOLABIE CIBS. Menguasai AI produktivitas, digital marketing, content creation, dan e-commerce.">
+  <!-- Page Header -->
+  <section class="relative pt-32 pb-16 overflow-hidden bg-primary text-white text-center">
+    <div class="absolute inset-0 bg-islamic-pattern opacity-15"></div>
+    <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/25 to-transparent -z-10"></div>
+    <div class="max-w-4xl mx-auto px-4 relative z-10 flex flex-col items-center">
+      <!-- Breadcrumbs -->
+      <nav aria-label="Breadcrumb" class="inline-flex items-center gap-2 text-xs font-semibold text-white/70 mb-4 bg-white/5 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/10 shadow-sm">
+        <a href="/" class="hover:text-accent transition-colors">Beranda</a>
+        <span class="text-accent-light/50 font-bold">&bull;</span>
+        <span class="text-accent-light">Keahlian Digital</span>
+      </nav>
+
+      <span class="text-accent uppercase tracking-widest text-xs font-bold mb-3 block">Inkubasi Keterampilan Modern</span>
+      <h1 class="text-3xl md:text-4xl font-serif font-bold mb-4">Kurikulum Keahlian Digital</h1>
+      <Ornament type="divider" class="mb-4" />
+      <p class="text-white/80 max-w-2xl mx-auto text-sm md:text-base">Membekali santri dengan kecakapan teknologi terkini agar siap berkarier dan mandiri secara finansial.</p>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="py-16 md:py-24 bg-surface relative overflow-hidden">
+    <div class="absolute inset-0 bg-islamic-pattern opacity-10 -z-10"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate-on-scroll">
+          <span class="text-primary uppercase tracking-widest text-xs font-bold mb-4 block">Urgensi Teknologi</span>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-secondary mb-6">Mengapa Menguasai Keahlian Digital?</h2>
+          <div class="space-y-4 text-gray-600 text-sm md:text-base leading-relaxed">
+            <p>
+              Ekonomi digital berkembang dengan sangat cepat. Permintaan pasar kerja saat ini tidak lagi hanya fokus pada gelar akademis formal, melainkan pembuktian keterampilan praktis (soft & hard skills) di bidang teknologi.
+            </p>
+            <p>
+              THOLABIE mendesain **Program Inkubasi Sore Hari** yang dipimpin oleh mentor praktisi industri berpengalaman untuk memastikan setiap santri lulus dengan portofolio proyek riil yang siap ditunjukkan kepada calon pemberi kerja atau klien global.
+            </p>
+          </div>
+        </div>
+        
+        <div class="animate-on-scroll delay-100 bg-white p-8 rounded-3xl border border-accent/20 shadow-premium relative">
+          <div class="absolute inset-0 bg-islamic-pattern opacity-5 -z-10"></div>
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-accent-dark border border-accent/30 shrink-0">
+              <Cpu class="w-6 h-6" />
+            </div>
+            <div>
+              <h3 class="font-bold text-secondary text-base">Pendekatan Hands-on (Praktik)</h3>
+              <p class="text-xs text-gray-500">Bukan sekadar teori hafalan, melainkan tugas proyek riil.</p>
+            </div>
+          </div>
+          <ul class="space-y-3 text-sm text-gray-600">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-primary rounded-full shrink-0"></span>
+              <span>Membuat website & toko online sendiri</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-primary rounded-full shrink-0"></span>
+              <span>Menulis artikel SEO & beriklan di Facebook</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 bg-primary rounded-full shrink-0"></span>
+              <span>Mengotomatisasi tugas admin menggunakan tool AI</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Digital Skills Course Grid -->
+  <section class="py-16 md:py-24 bg-surface-alt border-y border-accent/20 relative overflow-hidden">
+    <div class="absolute inset-0 bg-islamic-pattern opacity-25 -z-10"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+        <span class="text-primary uppercase tracking-widest text-xs font-bold mb-4 block">Teknologi Terkini</span>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-secondary mb-4">4 Pilar Kurikulum Digital</h2>
+        <Ornament type="divider" class="mb-6" />
+        <p class="text-gray-600">Pembelajaran bertahap yang dilalui santri selama 6 semester inkubasi:</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        {digitalModules.map((mod) => {
+          const Icon = mod.icon;
+          return (
+            <div class="animate-on-scroll bg-white p-8 rounded-2xl shadow-premium border border-accent/10 hover:border-accent/30 hover:-translate-y-0.5 transition-all duration-300 group">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary border border-primary/20 shrink-0 group-hover:scale-105 transition-transform">
+                  <Icon class="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h4 class="font-bold text-secondary text-base md:text-lg mb-2">{mod.title}</h4>
+                  <p class="text-xs text-gray-500 leading-relaxed">{mod.desc}</p>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Life Skills Section -->
+  <section class="py-16 md:py-24 bg-surface relative overflow-hidden">
+    <div class="absolute inset-0 bg-islamic-pattern opacity-30 -z-10"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+        <span class="text-primary uppercase tracking-widest text-xs font-bold mb-4 block">Kecakapan Karakter</span>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-secondary mb-4">Kecakapan Hidup (Life Skills)</h2>
+        <Ornament type="divider" class="mb-6" />
+        <p class="text-gray-600">Kami melatih aspek mental dan manajerial santri untuk membentuk karakter pemimpin Muslim sejati:</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        {lifeSkills.map((mod) => {
+          const Icon = mod.icon;
+          return (
+            <div class="animate-on-scroll bg-white p-6 rounded-2xl shadow-sm border border-accent/15 hover:border-accent/35 transition-all duration-300">
+              <div class="w-10 h-10 rounded-full bg-accent/20 text-accent-dark flex items-center justify-center mb-4 border border-accent/30">
+                <Icon class="w-5 h-5" />
+              </div>
+              <h4 class="font-bold text-secondary text-sm md:text-base mb-2">{mod.title}</h4>
+              <p class="text-xs text-gray-500 leading-relaxed">{mod.desc}</p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <FinalCTA />
+</Layout>

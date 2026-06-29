@@ -1,0 +1,70 @@
+---
+import { Sunrise, Building2, Laptop, Moon } from '@lucide/astro';
+import Ornament from '../Ornament.astro';
+---
+<section id="asrama" class="py-16 md:py-24 bg-surface relative overflow-hidden">
+  <div class="absolute inset-0 bg-islamic-pattern opacity-30 -z-10"></div>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+      <span class="text-primary uppercase tracking-widest text-xs font-bold mb-4 block">Kehidupan Asrama</span>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-secondary mb-4">Lingkungan Terstruktur untuk Bertumbuh</h2>
+      <Ornament type="divider" class="mb-6" />
+      <p class="text-gray-600 mb-4">Kami menyediakan lingkungan yang suportif, disiplin, dan kaya akan nilai spiritual. Orang tua dapat merasa tenang mengetahui anak-anak mereka diawasi dan membangun kebiasaan harian yang positif.</p>
+    </div>
+
+    <!-- Daily Rhythm -->
+    <div class="mb-16">
+      <h3 class="text-xl font-bold text-center text-secondary mb-8 animate-on-scroll">Irama Harian Santri</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="animate-on-scroll bg-white p-5 rounded-2xl border border-accent/10 text-center shadow-sm hover:shadow-md transition-shadow">
+          <Sunrise class="w-8 h-8 mx-auto text-accent mb-3 animate-pulse" />
+          <h4 class="font-bold text-sm mb-1 text-secondary">Pagi Hari</h4>
+          <p class="text-xs text-gray-500">Qiyamul Lail, Subuh berjamaah, Tahsin/Tahfidz Qur'an, dan persiapan sarapan.</p>
+        </div>
+        <div class="animate-on-scroll delay-100 bg-white p-5 rounded-2xl border border-accent/10 text-center shadow-sm hover:shadow-md transition-shadow">
+          <Building2 class="w-8 h-8 mx-auto text-primary mb-3" />
+          <h4 class="font-bold text-sm mb-1 text-secondary">Siang Hari</h4>
+          <p class="text-xs text-gray-500">Perkuliahan formal dan aktivitas akademik di kampus Politeknik.</p>
+        </div>
+        <div class="animate-on-scroll delay-200 bg-white p-5 rounded-2xl border border-accent/10 text-center shadow-sm hover:shadow-md transition-shadow">
+          <Laptop class="w-8 h-8 mx-auto text-primary-light mb-3" />
+          <h4 class="font-bold text-sm mb-1 text-secondary">Sore Hari</h4>
+          <p class="text-xs text-gray-500">Inkubasi keahlian: Digital marketing, bahasa asing, dan sesi kepemimpinan.</p>
+        </div>
+        <div class="animate-on-scroll delay-300 bg-white p-5 rounded-2xl border border-accent/10 text-center shadow-sm hover:shadow-md transition-shadow">
+          <Moon class="w-8 h-8 mx-auto text-secondary mb-3" />
+          <h4 class="font-bold text-sm mb-1 text-secondary">Malam Hari</h4>
+          <p class="text-xs text-gray-500">Maghrib berjamaah, kajian keislaman (Diniyah), dan jam belajar mandiri.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div class="animate-on-scroll aspect-square bg-gray-200 rounded-2xl overflow-hidden group relative shadow-md border-2 border-accent/10">
+        <img src="/img/pondok-pesantren-tholabie-malang.webp" alt="Fasilitas asrama THOLABIE" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex items-end p-4">
+          <span class="text-white font-medium text-xs sm:text-sm">Fasilitas Nyaman</span>
+        </div>
+      </div>
+      <div class="animate-on-scroll delay-100 aspect-square bg-gray-200 rounded-2xl overflow-hidden group relative shadow-md border-2 border-accent/10">
+        <img src="/img/pondok-tholabie-malang.webp" alt="Pembelajaran asrama THOLABIE" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex items-end p-4">
+          <span class="text-white font-medium text-xs sm:text-sm">Pembelajaran Digital</span>
+        </div>
+      </div>
+      <div class="animate-on-scroll delay-200 aspect-square bg-gray-200 rounded-2xl overflow-hidden hidden md:block group relative shadow-md border-2 border-accent/10">
+        <img src="/img/pesantren-tholabie-malang.webp" alt="Kegiatan kolaborasi asrama THOLABIE" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex items-end p-4">
+          <span class="text-white font-medium text-xs sm:text-sm">Kolaborasi Pembelajaran</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 text-center animate-on-scroll">
+      <a href="/asrama" class="inline-flex items-center text-primary font-bold hover:text-accent transition-colors group text-sm md:text-base">
+        Lihat Fasilitas & Jadwal Harian Lengkap <span class="group-hover:translate-x-1 transition-transform ml-1.5">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>

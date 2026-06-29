@@ -1,0 +1,60 @@
+---
+import { Minus, CheckCircle } from '@lucide/astro';
+import Ornament from '../Ornament.astro';
+---
+<section class="py-16 md:py-24 bg-surface relative overflow-hidden">
+  <div class="absolute inset-0 bg-islamic-pattern opacity-30 -z-10"></div>
+  
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center mb-12 animate-on-scroll">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-secondary text-center">Transformasi Santri Tholabie</h2>
+      <Ornament type="divider" class="mb-6" />
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <!-- Before -->
+      <div class="animate-on-scroll bg-white p-8 rounded-3xl border border-accent/10 shadow-premium relative hover:border-accent/20 transition-all duration-300">
+        <div class="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-wider mb-6">
+          Sebelum Masuk CIBS
+        </div>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <Minus class="w-5 h-5 text-accent-dark shrink-0 mt-0.5" />
+            <span class="text-gray-600 text-sm leading-relaxed">Arah masa depan yang belum pasti setelah lulus SMA/SMK.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <Minus class="w-5 h-5 text-accent-dark shrink-0 mt-0.5" />
+            <span class="text-gray-600 text-sm leading-relaxed">Minimnya paparan terhadap keterampilan digital praktis yang dibutuhkan industri.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <Minus class="w-5 h-5 text-accent-dark shrink-0 mt-0.5" />
+            <span class="text-gray-600 text-sm leading-relaxed">Kendala biaya untuk melanjutkan pendidikan ke perguruan tinggi berkualitas.</span>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- After -->
+      <div class="animate-on-scroll delay-100 bg-primary-dark text-white p-8 rounded-3xl border border-accent/30 relative overflow-hidden shadow-2xl hover:border-accent/50 transition-all duration-300">
+        <div class="absolute inset-0 bg-islamic-pattern opacity-10 -z-10"></div>
+        <div class="absolute top-0 right-0 w-24 h-24 bg-accent/10 rounded-bl-full"></div>
+        <div class="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-accent text-primary-dark text-xs font-bold uppercase tracking-wider mb-6 relative z-10">
+          Setelah Lulus dari CIBS
+        </div>
+        <ul class="space-y-4 relative z-10">
+          <li class="flex items-start gap-3">
+            <CheckCircle class="w-5 h-5 text-accent shrink-0 mt-0.5" />
+            <span class="text-gray-200 text-sm leading-relaxed font-medium">Memiliki karakter Islami yang kuat dan kedisiplinan ibadah harian.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <CheckCircle class="w-5 h-5 text-accent shrink-0 mt-0.5" />
+            <span class="text-gray-200 text-sm leading-relaxed font-medium">Menggenggam Ijazah Resmi D3 dari Politeknik Kota Malang.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <CheckCircle class="w-5 h-5 text-accent shrink-0 mt-0.5" />
+            <span class="text-gray-200 text-sm leading-relaxed font-medium">Siap kerja atau merintis usaha dengan portofolio keahlian digital yang matang.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

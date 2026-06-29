@@ -1,0 +1,175 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Ornament from '../components/Ornament.astro';
+import FinalCTA from '../components/sections/FinalCTA.astro';
+import { Target, Eye, ShieldCheck, Heart, Clock, Book, Flag, Lightbulb } from '@lucide/astro';
+
+const values = [
+  { icon: Heart, label: 'Iman', desc: 'Aqidah yang lurus dan adab sebagai pondasi kepemimpinan.' },
+  { icon: Clock, label: 'Disiplin', desc: 'Rutinitas harian terstruktur yang membangun produktivitas tinggi.' },
+  { icon: Book, label: 'Ilmu', desc: 'Kombinasi sains modern (Politeknik) dan tsaqafah Islam.' },
+  { icon: Flag, label: 'Kepemimpinan', desc: 'Melatih tanggung jawab sosial, empati, dan keberanian memimpin.' },
+  { icon: Lightbulb, label: 'Inovasi', desc: 'Menguasai AI dan teknologi digital sebagai alat dakwah & kemandirian.' },
+];
+---
+
+<Layout title="Profil & Visi Misi | Pondok Pesantren THOLABIE CIBS" description="Mengenal profil Pondok Pesantren THOLABIE CIBS Malang. Pelajari sejarah, visi misi utama, dewan pembina, dan 5 nilai dasar pembinaan karakter santri.">
+  <!-- Page Header -->
+  <section class="relative pt-32 pb-16 overflow-hidden bg-primary text-white text-center">
+    <div class="absolute inset-0 bg-islamic-pattern opacity-15"></div>
+    <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/25 to-transparent -z-10"></div>
+    <div class="max-w-4xl mx-auto px-4 relative z-10 flex flex-col items-center">
+      <!-- Breadcrumbs -->
+      <nav aria-label="Breadcrumb" class="inline-flex items-center gap-2 text-xs font-semibold text-white/70 mb-4 bg-white/5 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/10 shadow-sm">
+        <a href="/" class="hover:text-accent transition-colors">Beranda</a>
+        <span class="text-accent-light/50 font-bold">&bull;</span>
+        <span class="text-accent-light">Tentang Kami</span>
+      </nav>
+
+      <span class="text-accent uppercase tracking-widest text-xs font-bold mb-3 block">Mengenal Lebih Dekat</span>
+      <h1 class="text-3xl md:text-4xl font-serif font-bold mb-4">Profil & Nilai-Nilai Tholabie</h1>
+      <Ornament type="divider" class="mb-4" />
+      <p class="text-white/80 max-w-2xl mx-auto text-sm md:text-base">Classic International Boarding School dengan konsep modern terintegrasi.</p>
+    </div>
+  </section>
+
+  <!-- History & Philosophy -->
+  <section class="py-16 md:py-24 bg-surface relative overflow-hidden">
+    <div class="absolute inset-0 bg-islamic-pattern opacity-10 -z-10"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate-on-scroll">
+          <span class="text-primary uppercase tracking-widest text-xs font-bold mb-4 block">Filosofi & Sejarah</span>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-secondary mb-6">Membentuk Generasi Penggerak Perubahan</h2>
+          <div class="space-y-4 text-gray-600 text-sm md:text-base leading-relaxed">
+            <p>
+              Pondok Pesantren THOLABIE Classic International Boarding School didirikan atas kesadaran mendalam mengenai tantangan zaman yang dihadapi pemuda Muslim saat ini. Di satu sisi, dunia menuntut keahlian digital dan penguasaan sains yang sangat praktis, di sisi lain, pondasi akhlak dan aqidah seringkali terabaikan di lingkungan pendidikan konvensional.
+            </p>
+            <p>
+              Kami meyakini bahwa Islam tidak pernah memisahkan antara pencapaian ilmu duniawi dan kesucian ruhani. Oleh karena itu, THOLABIE merancang model pendidikan terintegrasi yang menjembatani asrama pembinaan karakter spiritual dengan beasiswa perguruan tinggi formal dan inkubasi digital.
+            </p>
+          </div>
+        </div>
+        
+        <div class="animate-on-scroll delay-100 relative max-w-md mx-auto w-full aspect-[4/5]">
+          <div class="absolute inset-0 bg-accent/20 rounded-t-[180px] rounded-b-3xl translate-x-4 translate-y-4 -z-10 border border-accent/30"></div>
+          <div class="relative w-full h-full rounded-t-[180px] rounded-b-3xl overflow-hidden border-2 border-accent/30 shadow-2xl bg-primary-dark">
+            <img src="/img/pesantren-tholabie-malang.webp" alt="Kegiatan santri belajar di Tholabie" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section class="py-16 md:py-24 bg-surface-alt border-y border-accent/20 relative overflow-hidden">
+    <div class="absolute inset-0 bg-islamic-pattern opacity-25 -z-10"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Visi -->
+        <div class="animate-on-scroll bg-white p-8 rounded-3xl border border-accent/15 shadow-premium flex flex-col justify-between hover:border-accent/30 transition-all duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary border border-primary/20">
+              <Eye class="w-6 h-6" />
+            </div>
+            <h3 class="text-2xl font-serif font-bold text-secondary mb-4">Visi Utama</h3>
+            <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-6">
+              Menjadi pusat pembinaan pemuda Muslim terkemuka yang melahirkan generasi berakhlaqul karimah, unggul secara akademis formal, dan cakap memimpin ekosistem ekonomi digital demi kejayaan Islam.
+            </p>
+          </div>
+          <div class="border-t border-gray-100 pt-4 text-xs text-gray-500 font-medium italic">
+            "Menyeimbangkan kekuatan dzikir, fikir, dan amal salih."
+          </div>
+        </div>
+
+        <!-- Misi -->
+        <div class="animate-on-scroll delay-100 bg-white p-8 rounded-3xl border border-accent/15 shadow-premium flex flex-col justify-between hover:border-accent/30 transition-all duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mb-6 text-accent-dark border border-accent/30">
+              <Target class="w-6 h-6" />
+            </div>
+            <h3 class="text-2xl font-serif font-bold text-secondary mb-4">Misi Kami</h3>
+            <ul class="space-y-3 text-sm text-gray-600 leading-relaxed">
+              <li class="flex items-start gap-2">
+                <span class="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0"></span>
+                <span>Menyelenggarakan pembinaan asrama Islami terstruktur berorientasi pembentukan karakter dan aqidah lurus.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0"></span>
+                <span>Memfasilitasi santri menempuh pendidikan tinggi formal D3 di Politeknik Kota Malang melalui program beasiswa.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0"></span>
+                <span>Menginkubasi keahlian praktis digital (AI, digital marketing, content creation) untuk kemandirian finansial & dakwah digital.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="border-t border-gray-100 pt-4 text-xs text-gray-500 font-medium italic mt-6">
+            "Membentuk pemimpin, bukan sekadar pekerja."
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dewan Pembina / Tokoh -->
+  <section class="py-16 md:py-24 bg-secondary text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-islamic-pattern opacity-10 -z-10"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-12 items-center">
+        <!-- Photo -->
+        <div class="animate-on-scroll relative max-w-sm mx-auto w-full aspect-square md:col-span-1">
+          <div class="absolute inset-0 bg-accent/20 rounded-full translate-x-3 translate-y-3 -z-10 border border-accent/30"></div>
+          <img src="/img/pembina_portrait.jpg" alt="Dewan Pembina Pesantren THOLABIE CIBS" class="w-full h-full object-cover rounded-full border-2 border-accent shadow-2xl" />
+        </div>
+        
+        <!-- Text -->
+        <div class="md:col-span-2 animate-on-scroll delay-100">
+          <span class="text-accent uppercase tracking-widest text-xs font-bold mb-4 block">Sambutan Dewan Pembina</span>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6 text-accent-muted">"Melangkah Maju Menembus Batas Zaman Tanpa Kehilangan Identitas Muslim."</h2>
+          <div class="space-y-4 text-gray-300 text-sm md:text-base leading-relaxed mb-6">
+            <p>
+              "THOLABIE mewakili evolusi yang sangat dibutuhkan. Kita tidak bisa hanya membekali pemuda kita dengan teori agama; kita harus memberdayakan mereka dengan alat praktis untuk bernavigasi dan memimpin dalam ekonomi modern, sambil tetap mempertahankan identitas keislaman mereka secara kokoh."
+            </p>
+            <p>
+              Kami mengundang para pemuda Muslim berbakat di seluruh Indonesia yang memiliki semangat belajar tinggi namun terhambat keterbatasan finansial, untuk bergabung bersama kami. Di sini, Anda dididik untuk menjadi pionir masa depan ekonomi digital yang bertauhid lurus.
+            </p>
+          </div>
+          <div>
+            <p class="font-bold text-white text-base">Dewan Pembina Institusi</p>
+            <p class="text-xs text-accent">Pondok Pesantren THOLABIE CIBS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values -->
+  <section class="py-16 md:py-24 bg-surface relative overflow-hidden">
+    <div class="absolute inset-0 bg-islamic-pattern opacity-30 -z-10"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-secondary mb-4">5 Nilai Utama Tholabie</h2>
+        <Ornament type="divider" class="mb-6" />
+        <p class="text-gray-600">Nilai-nilai fundamental yang kami tanamkan di setiap langkah kehidupan santri.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+        {values.map((val, idx) => {
+          const Icon = val.icon;
+          return (
+            <div class="animate-on-scroll bg-white p-6 rounded-2xl shadow-premium border border-accent/10 text-center hover:border-accent/30 hover:-translate-y-1 transition-all duration-300 group">
+              <div class="w-12 h-12 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary border border-primary/20 mb-4 group-hover:scale-110 transition-transform">
+                <Icon class="w-6 h-6 text-accent" />
+              </div>
+              <h4 class="font-bold text-sm text-secondary mb-2">{val.label}</h4>
+              <p class="text-xs text-gray-500 leading-relaxed">{val.desc}</p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <FinalCTA />
+</Layout>

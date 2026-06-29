@@ -1,0 +1,60 @@
+---
+interface Props {
+  type?: 'star' | 'divider' | 'border-pattern' | 'corner';
+  class?: string;
+}
+
+const { type = 'divider', class: className = '' } = Astro.props;
+---
+
+{type === 'star' && (
+  <svg 
+    class={`w-6 h-6 text-accent animate-float ${className}`} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    stroke-width="1.5" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+  >
+    <rect x="5" y="5" width="14" height="14" rx="0.5" />
+    <rect x="5" y="5" width="14" height="14" rx="0.5" transform="rotate(45 12 12)" />
+    <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+  </svg>
+)}
+
+{type === 'divider' && (
+  <div class={`flex items-center justify-center gap-4 my-8 ${className}`}>
+    <div class="h-[1px] w-16 bg-gradient-to-r from-transparent via-accent/30 to-accent"></div>
+    <svg 
+      class="w-5 h-5 text-accent animate-float" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      stroke-width="1.5"
+    >
+      <rect x="5" y="5" width="14" height="14" rx="0.5" />
+      <rect x="5" y="5" width="14" height="14" rx="0.5" transform="rotate(45 12 12)" />
+      <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+    </svg>
+    <div class="h-[1px] w-16 bg-gradient-to-l from-transparent via-accent/30 to-accent"></div>
+  </div>
+)}
+
+{type === 'border-pattern' && (
+  <div class={`w-full h-2 bg-islamic-pattern opacity-30 ${className}`}></div>
+)}
+
+{type === 'corner' && (
+  <svg 
+    class={`w-8 h-8 text-accent/30 ${className}`} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    stroke-width="1.5"
+  >
+    <path d="M4 4h16M4 4v16" stroke-linecap="round" />
+    <rect x="6" y="6" width="4" height="4" rx="0.5" />
+    <rect x="6" y="6" width="4" height="4" rx="0.5" transform="rotate(45 8 8)" />
+  </svg>
+)}

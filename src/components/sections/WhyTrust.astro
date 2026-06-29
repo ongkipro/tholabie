@@ -1,0 +1,70 @@
+---
+import { ShieldCheck, Eye, Clock, Map, Briefcase } from '@lucide/astro';
+import Ornament from '../Ornament.astro';
+
+const reasons = [
+  {
+    icon: ShieldCheck,
+    title: 'Lingkungan Islami',
+    desc: 'Pergaulan yang terjaga dan fokus pada adab & akhlak.',
+    bgColor: 'bg-primary/10',
+    textColor: 'text-primary',
+  },
+  {
+    icon: Eye,
+    title: 'Perkembangan Terawasi',
+    desc: 'Mentoring langsung dari pembimbing akademik & spiritual.',
+    bgColor: 'bg-accent/15',
+    textColor: 'text-accent-dark',
+  },
+  {
+    icon: Clock,
+    title: 'Sistem Kedisiplinan',
+    desc: 'Tidak ada waktu terbuang; rutinitas harian yang produktif.',
+    bgColor: 'bg-secondary/10',
+    textColor: 'text-secondary',
+  },
+  {
+    icon: Map,
+    title: 'Jalur yang Jelas',
+    desc: 'Perjalanan terstruktur dari pendaftaran hingga siap karier.',
+    bgColor: 'bg-primary-light/10',
+    textColor: 'text-primary-light',
+  },
+  {
+    icon: Briefcase,
+    title: 'Persiapan Praktis',
+    desc: 'Keterampilan yang langsung menunjang kemandirian finansial.',
+    bgColor: 'bg-accent/15',
+    textColor: 'text-accent-dark',
+  },
+];
+---
+<section class="py-16 md:py-24 bg-surface-alt border-t border-accent/20 relative overflow-hidden">
+  <div class="absolute inset-0 bg-islamic-pattern opacity-30 -z-10"></div>
+  
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-secondary mb-4">Mengapa Orang Tua Mempercayai Tholabie</h2>
+      <Ornament type="divider" class="mb-6" />
+      <p class="text-gray-600">Ketenangan batin mengetahui putra-putri Anda berada dalam lingkungan yang aman, terstruktur, dan berorientasi masa depan.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      {reasons.map((reason, idx) => {
+        const Icon = reason.icon;
+        return (
+          <div
+            class="animate-on-scroll bg-white p-6 rounded-2xl shadow-premium border border-accent/10 text-center hover:border-accent/30 hover:-translate-y-1 transition-all duration-300 group"
+          >
+            <div class={`w-12 h-12 mx-auto ${reason.bgColor} rounded-full flex items-center justify-center ${reason.textColor} mb-4 group-hover:scale-110 transition-transform`}>
+              <Icon class="w-6 h-6" />
+            </div>
+            <h4 class="font-bold text-sm text-secondary mb-2">{reason.title}</h4>
+            <p class="text-xs text-gray-500 leading-relaxed">{reason.desc}</p>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

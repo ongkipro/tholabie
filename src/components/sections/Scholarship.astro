@@ -1,0 +1,91 @@
+---
+import { BadgeCheck, Home, Briefcase, Compass, BookMarked, ClipboardList, Check, ArrowRight } from '@lucide/astro';
+import Ornament from '../Ornament.astro';
+---
+<section id="beasiswa" class="py-16 md:py-24 bg-primary relative overflow-hidden">
+  <div class="absolute inset-0 bg-islamic-pattern opacity-15"></div>
+  
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+      <span class="text-accent uppercase tracking-widest text-sm font-bold mb-4 block">Program Resmi 2026</span>
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4 leading-tight">
+        Beasiswa Kuliah Berasrama <br/> Politeknik Kota Malang & CIBS
+      </h2>
+      <Ornament type="divider" class="mb-6" />
+      <p class="text-white/95 text-base md:text-lg">Beasiswa pendidikan terintegrasi yang dirancang khusus untuk lulusan berpotensi tinggi dari keluarga dengan keterbatasan ekonomi.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2 grid sm:grid-cols-2 gap-4">
+        <div class="animate-on-scroll bg-white/10 backdrop-blur-sm border border-accent/20 p-6 rounded-2xl text-white hover:bg-white/15 hover:border-accent/40 transition-all duration-300">
+          <BadgeCheck class="w-8 h-8 text-accent mb-4" />
+          <h3 class="text-lg font-bold mb-2">100% Bebas Biaya Kuliah</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">Beasiswa penuh selama masa studi program D3 Politeknik Kota Malang.</p>
+        </div>
+        <div class="animate-on-scroll delay-100 bg-white/10 backdrop-blur-sm border border-accent/20 p-6 rounded-2xl text-white hover:bg-white/15 hover:border-accent/40 transition-all duration-300">
+          <Home class="w-8 h-8 text-accent mb-4" />
+          <h3 class="text-lg font-bold mb-2">Fasilitas Asrama Islami</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">Akomodasi gratis di lingkungan asrama yang terstruktur untuk membangun karakter Islami.</p>
+        </div>
+        <div class="animate-on-scroll delay-200 bg-white/10 backdrop-blur-sm border border-accent/20 p-6 rounded-2xl text-white hover:bg-white/15 hover:border-accent/40 transition-all duration-300">
+          <Briefcase class="w-8 h-8 text-accent mb-4" />
+          <h3 class="text-lg font-bold mb-2">Pelatihan Life & Digital Skills</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">Pelatihan ekstrakurikuler intensif dalam bidang digital marketing, pemanfaatan AI, dan kewirausahaan.</p>
+        </div>
+        <div class="animate-on-scroll delay-300 bg-white/10 backdrop-blur-sm border border-accent/20 p-6 rounded-2xl text-white hover:bg-white/15 hover:border-accent/40 transition-all duration-300">
+          <Compass class="w-8 h-8 text-accent mb-4" />
+          <h3 class="text-lg font-bold mb-2">Pendampingan Karier</h3>
+          <p class="text-sm text-gray-300 leading-relaxed">Bimbingan langsung untuk persiapan memasuki dunia kerja atau memulai bisnis setelah lulus.</p>
+        </div>
+      </div>
+
+      <div class="animate-on-scroll delay-400 bg-white rounded-3xl p-8 shadow-2xl relative overflow-hidden text-secondary border border-accent/30">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-bl-full -z-0"></div>
+        
+        <h3 class="text-xl font-serif font-bold text-secondary mb-6 relative z-10 flex items-center gap-2">
+          <BookMarked class="w-5 h-5 text-primary" /> Pilihan Program Studi
+        </h3>
+        <ul class="space-y-3 mb-8 relative z-10">
+          <li class="flex items-center gap-3 text-sm text-gray-700 font-medium">
+            <span class="w-2 h-2 rounded-full bg-accent"></span> D3 Teknik Informatika
+          </li>
+          <li class="flex items-center gap-3 text-sm text-gray-700 font-medium">
+            <span class="w-2 h-2 rounded-full bg-accent"></span> D3 Teknik Mekatronika
+          </li>
+          <li class="flex items-center gap-3 text-sm text-gray-700 font-medium">
+            <span class="w-2 h-2 rounded-full bg-accent"></span> D3 Teknik Telekomunikasi
+          </li>
+        </ul>
+
+        <h3 class="text-xl font-serif font-bold text-secondary mb-6 relative z-10 flex items-center gap-2">
+          <ClipboardList class="w-5 h-5 text-primary" /> Syarat Pendaftaran
+        </h3>
+        <ul class="space-y-3 mb-8 relative z-10">
+          <li class="flex items-start gap-3 text-sm text-gray-600">
+            <Check class="w-4 h-4 text-primary mt-0.5 shrink-0" />
+            <span>Lulusan SMA/SMK/Sederajat (Pesantren)</span>
+          </li>
+          <li class="flex items-start gap-3 text-sm text-gray-600">
+            <Check class="w-4 h-4 text-primary mt-0.5 shrink-0" />
+            <span>Tahun kelulusan 2024 atau 2025</span>
+          </li>
+          <li class="flex items-start gap-3 text-sm text-gray-600">
+            <Check class="w-4 h-4 text-primary mt-0.5 shrink-0" />
+            <span>Berasal dari keluarga prasejahtera</span>
+          </li>
+          <li class="flex items-start gap-3 text-sm text-gray-600">
+            <Check class="w-4 h-4 text-primary mt-0.5 shrink-0" />
+            <span>Bersedia tinggal dan mematuhi Tata Tertib Tholabie CIBS</span>
+          </li>
+        </ul>
+
+        <div class="pt-4 text-center relative z-10 border-t border-gray-100 mt-6">
+          <a href="/beasiswa" class="inline-flex items-center text-sm font-bold text-primary hover:text-accent group transition-colors">
+            Lihat Kurikulum & Detail Beasiswa Lengkap
+            <ArrowRight class="w-4 h-4 ml-1.5 group-hover:translate-x-0.5 transition-transform" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

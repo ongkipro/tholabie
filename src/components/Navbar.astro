@@ -1,12 +1,12 @@
 ---
-import { Menu, X } from '@lucide/astro';
+import { Info, Award, Home, Laptop, MessageSquare, HelpCircle, MessageCircle, ChevronRight } from '@lucide/astro';
 
 const navLinks = [
-  { name: 'Tentang Kami', href: '#tentang', id: 'tentang' },
-  { name: 'Program Beasiswa', href: '#beasiswa', id: 'beasiswa' },
-  { name: 'Kehidupan Asrama', href: '#asrama', id: 'asrama' },
-  { name: 'Keahlian Digital', href: '#keahlian', id: 'keahlian' },
-  { name: 'Testimoni', href: '#testimoni', id: 'testimoni' },
+  { name: 'Tentang Kami', href: '/tentang', id: 'tentang', icon: Info },
+  { name: 'Program Beasiswa', href: '/beasiswa', id: 'beasiswa', icon: Award },
+  { name: 'Kehidupan Asrama', href: '/asrama', id: 'asrama', icon: Home },
+  { name: 'Keahlian Digital', href: '/kurikulum', id: 'kurikulum', icon: Laptop },
+  { name: 'Hubungi Kami', href: '/kontak', id: 'kontak', icon: HelpCircle },
 ];
 ---
 <header
@@ -15,15 +15,15 @@ const navLinks = [
 >
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center">
-      <a href="#" class="flex items-center gap-2 group">
+      <a href="/" aria-label="Beranda Pondok Pesantren THOLABIE CIBS" class="flex items-center gap-2 group">
         <img
           src="/img/logo.webp"
           alt="Logo Pondok Pesantren THOLABIE CIBS"
-          class="w-10 h-10 object-contain rounded-full shadow-md group-hover:opacity-80 transition-opacity"
+          class="w-10 h-10 object-contain rounded-full shadow-md border border-accent/40 group-hover:opacity-80 transition-all duration-300"
         />
         <div class="flex flex-col">
-          <span class="font-serif font-bold text-lg leading-none text-primary">THOLABIE</span>
-          <span class="text-[10px] tracking-widest text-secondary uppercase font-medium mt-1">CIBS</span>
+          <span class="font-serif font-bold text-lg leading-none text-primary group-hover:text-accent transition-colors">THOLABIE</span>
+          <span class="text-xs tracking-widest text-secondary uppercase font-semibold mt-1">CIBS</span>
         </div>
       </a>
 
@@ -31,7 +31,7 @@ const navLinks = [
         {navLinks.map((link) => (
           <a
             href={link.href}
-            class="nav-link text-sm font-medium text-secondary hover:text-primary transition-colors"
+            class="nav-link text-sm font-medium text-secondary hover:text-accent transition-colors"
             data-link={link.id}
           >
             {link.name}
@@ -44,41 +44,68 @@ const navLinks = [
           href="https://wa.me/6285183003060"
           target="_blank"
           rel="noopener noreferrer"
-          class="hidden md:inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-semibold rounded-full text-primary-dark bg-accent hover:bg-accent-light transition-all shadow-sm hover:shadow-md"
+          class="hidden md:inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold rounded-full text-primary-dark bg-accent hover:bg-accent-light border border-accent/30 shadow-sm hover:shadow-premium-hover active:scale-95 transition-all duration-300"
         >
           Daftar Sekarang
         </a>
         <button
           id="mobile-menu-btn"
           aria-label="Toggle Menu"
-          class="md:hidden p-2 text-secondary hover:text-primary transition-colors focus:outline-none"
+          class="md:hidden flex items-center justify-center w-10 h-10 rounded-full border border-primary/10 bg-primary/5 hover:bg-primary/10 text-secondary focus:outline-none transition-all duration-300 active:scale-90"
         >
-          <Menu class="w-6 h-6 open-icon" />
-          <X class="w-6 h-6 close-icon hidden" />
+          <div class="flex flex-col justify-between w-5 h-3.5 relative">
+            <span class="w-full h-[2px] bg-current rounded-full transition-all duration-300 origin-left"></span>
+            <span class="w-full h-[2px] bg-current rounded-full transition-all duration-300"></span>
+            <span class="w-full h-[2px] bg-current rounded-full transition-all duration-300 origin-left"></span>
+          </div>
         </button>
       </div>
     </div>
   </div>
 
+  <!-- Floating Mobile Menu Drawer -->
   <div
     id="mobile-menu"
-    class="md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl"
+    class="md:hidden absolute top-[76px] left-4 right-4 w-[calc(100%-32px)] bg-white/95 backdrop-blur-lg border border-accent/25 shadow-2xl rounded-2xl overflow-hidden"
   >
-    <div class="px-4 pt-2 pb-6 space-y-1">
-      {navLinks.map((link) => (
+    <div class="absolute inset-0 bg-islamic-pattern opacity-5 -z-10"></div>
+    <div class="p-3 space-y-1.5 relative z-10">
+      {navLinks.map((link) => {
+        const Icon = link.icon;
+        return (
+          <a
+            href={link.href}
+            class="mobile-nav-link flex items-center justify-between p-2.5 text-sm font-bold text-secondary hover:bg-primary/5 rounded-xl border border-transparent hover:border-accent/15 transition-all duration-300 group"
+          >
+            <div class="flex items-center gap-3">
+              <div class="mobile-icon-wrapper w-9 h-9 rounded-xl bg-primary/5 flex items-center justify-center text-primary transition-colors shrink-0">
+                <Icon class="w-4.5 h-4.5 text-primary shrink-0" />
+              </div>
+              <span class="font-serif text-secondary group-hover:text-primary transition-colors">{link.name}</span>
+            </div>
+            <ChevronRight class="w-4 h-4 text-accent/50 group-hover:text-accent group-hover:translate-x-1 transition-all" />
+          </a>
+        );
+      })}
+
+      <!-- Mobile Menu CTA Button -->
+      <div class="pt-3 border-t border-accent/20 mt-3 px-1">
         <a
-          href={link.href}
-          class="mobile-nav-link block px-3 py-3 text-base font-medium text-secondary hover:bg-surface-alt hover:text-primary rounded-md transition-colors"
+          href="https://wa.me/6285183003060"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-center gap-2 w-full px-6 py-3 text-sm font-bold rounded-xl text-primary-dark bg-accent hover:bg-accent-light border border-accent/30 shadow-md active:scale-98 transition-all duration-300 group"
         >
-          {link.name}
+          <MessageCircle class="w-4 h-4 shrink-0 text-primary-dark group-hover:scale-110 transition-transform" />
+          Daftar via WhatsApp
         </a>
-      ))}
-      <a
-        href="#faq"
-        class="mobile-nav-link block px-3 py-3 text-base font-medium text-secondary hover:bg-surface-alt hover:text-primary rounded-md transition-colors"
-      >
-        FAQ
-      </a>
+      </div>
+
+      <!-- Quick Info / Subtitle -->
+      <div class="mt-4 text-center pb-1">
+        <p class="text-[9px] text-gray-400 font-serif font-bold">Pondok Pesantren THOLABIE CIBS</p>
+        <p class="text-[8px] text-gray-500 mt-0.5">Malang, Jawa Timur &bull; Hubungi: +62 851 8300 3060</p>
+      </div>
     </div>
   </div>
 </header>

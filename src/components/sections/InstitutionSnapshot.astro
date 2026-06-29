@@ -1,0 +1,62 @@
+---
+import { Moon, Award, Laptop, TrendingUp } from '@lucide/astro';
+
+const cards = [
+  {
+    icon: Moon,
+    title: 'Asrama Islami',
+    desc: 'Pembangunan karakter & spiritual terstruktur',
+    bgColor: 'bg-primary/10',
+    textColor: 'text-primary',
+    hoverBg: 'group-hover:bg-primary',
+    delay: '',
+  },
+  {
+    icon: Award,
+    title: 'Kuliah Gratis',
+    desc: 'Beasiswa penuh 100% untuk Program D3',
+    bgColor: 'bg-accent/10',
+    textColor: 'text-accent-dark',
+    hoverBg: 'group-hover:bg-accent group-hover:text-primary-dark',
+    delay: 'delay-100',
+  },
+  {
+    icon: Laptop,
+    title: 'Keahlian Digital',
+    desc: 'Kompetensi AI, Digital Marketing & Tech',
+    bgColor: 'bg-secondary/10',
+    textColor: 'text-secondary',
+    hoverBg: 'group-hover:bg-secondary',
+    delay: 'delay-200',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Siap Berkarier',
+    desc: 'Inkubasi kepemimpinan & kewirausahaan',
+    bgColor: 'bg-primary-dark/10',
+    textColor: 'text-primary-dark',
+    hoverBg: 'group-hover:bg-primary-dark',
+    delay: 'delay-300',
+  },
+];
+---
+<section class="relative -mt-10 lg:-mt-16 z-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
+    {cards.map((card) => {
+      const Icon = card.icon;
+      return (
+        <div
+          class={`animate-on-scroll ${card.delay} bg-white p-6 rounded-2xl shadow-premium border border-accent/10 hover:border-accent/30 flex flex-col items-start hover:-translate-y-1 transition-all duration-300 group`}
+        >
+          <div
+            class={`w-12 h-12 rounded-full ${card.bgColor} ${card.textColor} flex items-center justify-center mb-4 ${card.hoverBg} group-hover:text-white transition-all duration-300`}
+          >
+            <Icon class="w-6 h-6" />
+          </div>
+          <h3 class="font-bold text-secondary text-sm md:text-base mb-1">{card.title}</h3>
+          <p class="text-xs md:text-sm text-gray-500 leading-relaxed">{card.desc}</p>
+        </div>
+      );
+    })}
+  </div>
+</section>

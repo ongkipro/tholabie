@@ -1,0 +1,52 @@
+---
+import { Heart, Clock, Book, Flag, Lightbulb } from '@lucide/astro';
+import Ornament from '../Ornament.astro';
+
+const values = [
+  { icon: Heart, label: 'Iman' },
+  { icon: Clock, label: 'Disiplin' },
+  { icon: Book, label: 'Ilmu' },
+  { icon: Flag, label: 'Kepemimpinan' },
+  { icon: Lightbulb, label: 'Inovasi' },
+];
+---
+<section class="py-16 md:py-24 bg-surface relative overflow-hidden">
+  <div class="absolute inset-0 bg-islamic-pattern opacity-40 -z-10"></div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll relative">
+    <div class="inline-flex justify-center items-center mb-6">
+      <span class="font-arabic text-3xl md:text-4xl text-primary font-bold">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</span>
+    </div>
+    
+    <span class="text-primary uppercase tracking-widest text-xs font-bold mb-4 block">Identitas Kami</span>
+    
+    <h2 class="text-3xl md:text-4xl font-serif font-bold text-secondary mb-6 leading-tight">
+      Lebih Dari Sekadar Asrama.<br />
+      <span class="text-primary italic font-serif">Inkubator Pemimpin Muslim.</span>
+    </h2>
+
+    <Ornament type="divider" class="my-6" />
+
+    <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-10 max-w-3xl mx-auto">
+      Pondok Pesantren THOLABIE Classic International Boarding School adalah institusi pendidikan modern yang didesain untuk pemuda Muslim abad ke-21. Kami percaya bahwa kesuksesan sejati berasal dari keseimbangan antara aqidah yang lurus, kedisiplinan yang ketat, keunggulan akademis formal, dan kemampuan berinovasi di dunia modern.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-3">
+      {values.map((val) => {
+        const Icon = val.icon;
+        return (
+          <span
+            class="px-5 py-2.5 rounded-full bg-white text-secondary text-sm font-semibold border border-accent/20 hover:border-accent/50 shadow-sm flex items-center gap-2 transition-colors group"
+          >
+            <Icon class="w-4 h-4 text-primary group-hover:text-accent transition-colors" /> {val.label}
+          </span>
+        );
+      })}
+    </div>
+
+    <div class="mt-10 animate-on-scroll">
+      <a href="/tentang" class="inline-flex items-center text-primary font-bold hover:text-accent transition-colors group text-sm md:text-base">
+        Pelajari Visi, Misi & Profil Lengkap <span class="group-hover:translate-x-1 transition-transform ml-1.5">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>

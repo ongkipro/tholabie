@@ -1,0 +1,222 @@
+---
+import { ArrowRight, GraduationCap, MessageCircle, Wallet, BookOpen, ShieldCheck } from '@lucide/astro';
+import Ornament from '../Ornament.astro';
+---
+<section id="hero" class="relative pt-32 pb-24 lg:pt-44 lg:pb-36 overflow-hidden bg-surface">
+  <!-- ============================================================= -->
+  <!-- FULL-WIDTH ISLAMIC ORNAMENT BACKDROP (spans entire viewport)  -->
+  <!-- ============================================================= -->
+  <div class="absolute inset-0 w-full h-full z-0 pointer-events-none" aria-hidden="true">
+    <!-- Base vertical wash: ivory → warm sand -->
+    <div class="absolute inset-0 bg-gradient-to-b from-surface via-surface to-surface-alt/70"></div>
+
+    <!-- Full-width tiling arabesque (8-point khatam stars) -->
+    <svg class="absolute inset-0 w-full h-full text-accent-dark" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="hero-arabesque" width="96" height="96" patternUnits="userSpaceOnUse">
+          <g fill="none" stroke="currentColor" stroke-width="1.1" stroke-opacity="0.2">
+            <!-- central 8-point star (two overlapped squares) -->
+            <rect x="28" y="28" width="40" height="40" transform="rotate(0 48 48)" />
+            <rect x="28" y="28" width="40" height="40" transform="rotate(45 48 48)" />
+            <circle cx="48" cy="48" r="3" stroke-opacity="0" fill="currentColor" fill-opacity="0.18" />
+            <!-- corner stars meeting across tiles -->
+            <rect x="-20" y="-20" width="40" height="40" transform="rotate(45 0 0)" />
+            <rect x="76" y="-20" width="40" height="40" transform="rotate(45 96 0)" />
+            <rect x="-20" y="76" width="40" height="40" transform="rotate(45 0 96)" />
+            <rect x="76" y="76" width="40" height="40" transform="rotate(45 96 96)" />
+          </g>
+        </pattern>
+        <!-- radial mask: pattern strong at edges, softly cleared behind the headline column -->
+        <radialGradient id="hero-fade" cx="38%" cy="48%" r="62%">
+          <stop offset="0%" stop-color="black" stop-opacity="1" />
+          <stop offset="45%" stop-color="black" stop-opacity="0.55" />
+          <stop offset="100%" stop-color="white" stop-opacity="1" />
+        </radialGradient>
+        <mask id="hero-mask">
+          <rect width="100%" height="100%" fill="url(#hero-fade)" />
+        </mask>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#hero-arabesque)" mask="url(#hero-mask)" />
+    </svg>
+
+    <!-- Grand Mihrab gateway arch — full width, anchored to bottom -->
+    <svg viewBox="0 0 1440 620" preserveAspectRatio="xMidYMax meet" fill="none" stroke="currentColor"
+         class="absolute left-0 bottom-0 w-full h-[78%] text-primary/20">
+      <path d="M 120,620 L 120,300 C 120,150 430,60 720,30 C 1010,60 1320,150 1320,300 L 1320,620" stroke-width="1.5" />
+      <path d="M 150,620 L 150,312 C 150,172 445,86 720,56 C 995,86 1290,172 1290,312 L 1290,620" stroke-width="1" stroke-dasharray="7,7" stroke-opacity="0.7" />
+      <!-- keystone rosette -->
+      <g transform="translate(720,42) scale(1.1)" class="text-accent/50" stroke="currentColor">
+        <rect x="-11" y="-11" width="22" height="22" stroke-width="1.2" />
+        <rect x="-11" y="-11" width="22" height="22" stroke-width="1.2" transform="rotate(45)" />
+        <circle cx="0" cy="0" r="2.5" fill="currentColor" />
+      </g>
+    </svg>
+
+    <!-- Ambient color glows -->
+    <div class="absolute -top-24 right-0 translate-x-1/4 w-[760px] h-[760px] bg-primary/5 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-32 -left-24 w-[620px] h-[620px] bg-accent/8 rounded-full blur-3xl"></div>
+
+    <!-- Full-width ornamental band along the bottom edge -->
+    <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 w-full h-3 bg-islamic-pattern opacity-40"></div>
+  </div>
+
+  <!-- Symmetric corner ornaments framing the hero -->
+  <Ornament type="corner" class="absolute top-28 left-4 lg:left-10 w-9 h-9 hidden sm:block" />
+  <Ornament type="corner" class="absolute top-28 right-4 lg:right-10 w-9 h-9 rotate-90 hidden sm:block" />
+
+  <!-- Floating micro-stars -->
+  <div class="absolute top-[26%] left-[6%] w-6 h-6 text-accent/30 animate-float pointer-events-none hidden lg:block">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L15 9 L22 12 L15 15 L12 22 L9 15 L2 12 L9 9 Z" fill-opacity="0.5"/></svg>
+  </div>
+  <div class="absolute top-[20%] right-[26%] w-5 h-5 text-primary/25 animate-float delay-2000 pointer-events-none hidden lg:block">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L15 9 L22 12 L15 15 L12 22 L9 15 L2 12 L9 9 Z" fill-opacity="0.5"/></svg>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- CONTENT                                                       -->
+  <!-- ============================================================= -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
+      <div class="max-w-2xl">
+        <div class="animate-on-scroll">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary border border-primary/20 text-xs font-semibold tracking-wider uppercase mb-6">
+            <span class="relative flex h-2 w-2">
+              <span class="absolute inline-flex h-full w-full rounded-full bg-accent opacity-75 animate-ping"></span>
+              <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
+            </span>
+            Pendaftaran Santri Baru — Angkatan 2026
+          </div>
+        </div>
+
+        <h1 class="animate-on-scroll delay-100 text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-[1.08] text-secondary mb-5">
+          <span class="sr-only">Pondok Pesantren THOLABIE CIBS: </span>
+          Menjembatani <span class="text-primary italic">Iman</span>, Ilmu, dan <span class="bg-gradient-to-r from-accent-dark via-accent to-accent-dark bg-clip-text text-transparent font-semibold">Karier Masa Depan</span>.
+        </h1>
+
+        <p class="animate-on-scroll delay-200 text-base md:text-lg text-gray-600 mb-6 leading-relaxed max-w-xl">
+          Boarding school Islami modern yang memadukan <strong class="font-semibold text-secondary">tahfizh Al-Qur'an</strong>, <strong class="font-semibold text-secondary">beasiswa penuh politeknik</strong>, dan <strong class="font-semibold text-secondary">keahlian digital</strong> — menyiapkan generasi Muslim berakhlak untuk memimpin di era ekonomi digital.
+        </p>
+
+        <!-- Arched Mobile Image with Offset Gold backdrop shadow -->
+        <div class="lg:hidden relative w-full max-w-sm mx-auto aspect-[4/5] animate-on-scroll delay-200 mb-8 mt-2">
+          <div class="absolute inset-0 bg-accent/20 rounded-t-[140px] rounded-b-3xl translate-x-3 translate-y-3 -z-10 border border-accent/30"></div>
+          <div class="relative w-full h-full rounded-t-[140px] rounded-b-3xl overflow-hidden border-2 border-accent/30 shadow-2xl bg-primary-dark">
+            <div class="absolute inset-0 bg-secondary/15 mix-blend-multiply z-10 transition-opacity hover:opacity-0 duration-500"></div>
+            <img
+              src="/img/pondok-pesantren-tholabie-malang-cibs.webp"
+              alt="Santri Pondok Pesantren THOLABIE CIBS Malang belajar teknologi digital"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-xl z-20 flex justify-between items-center border border-accent/20 animate-float">
+              <div>
+                <p class="text-xs text-primary font-bold uppercase tracking-wider mb-0.5">
+                  Mitra Pendidikan Formal
+                </p>
+                <p class="text-secondary font-bold text-xs sm:text-sm">Politeknik Kota Malang</p>
+              </div>
+              <div class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-accent shrink-0">
+                <GraduationCap class="w-4 h-4" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slim Makkah Kiswah verse epigraph -->
+        <div class="animate-on-scroll delay-200 mb-7 flex items-stretch rounded-xl bg-secondary/95 border border-accent/30 shadow-lg overflow-hidden">
+          <div class="w-1.5 shrink-0 bg-gradient-to-b from-accent-light to-accent-dark"></div>
+          <div class="py-3.5 px-4 min-w-0">
+            <p class="font-arabic text-xl md:text-2xl text-accent-light leading-snug text-right mb-1.5" dir="rtl">
+              يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ
+            </p>
+            <p class="text-xs text-gray-300 italic leading-relaxed">
+              "...Allah akan meninggikan orang beriman dan berilmu beberapa derajat..."
+              <span class="not-italic font-semibold text-accent/90 whitespace-nowrap">— QS. Al-Mujadilah: 11</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="animate-on-scroll delay-300 flex flex-col sm:flex-row gap-4">
+          <a
+            href="https://wa.me/6285183003060"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-7 py-3.5 text-base font-bold rounded-full text-primary-dark bg-accent hover:bg-accent-light border border-accent/30 shadow-premium hover:shadow-premium-hover hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 group whitespace-nowrap"
+          >
+            <MessageCircle class="mr-2 w-5 h-5" />
+            Daftar via WhatsApp
+            <ArrowRight class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </a>
+          <a
+            href="/beasiswa"
+            class="inline-flex items-center justify-center px-7 py-3.5 text-base font-semibold rounded-full text-primary border-2 border-primary/20 hover:border-primary hover:bg-primary/5 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 whitespace-nowrap"
+          >
+            Lihat Program Beasiswa
+          </a>
+        </div>
+
+        <p class="animate-on-scroll delay-400 mt-4 flex items-center gap-1.5 text-xs text-gray-500">
+          <ShieldCheck class="w-4 h-4 text-primary shrink-0" />
+          Gratis konsultasi · Dibimbing langsung tim pendaftaran · Kuota terbatas
+        </p>
+
+        <!-- Trust stats -->
+        <dl class="animate-on-scroll delay-500 mt-9 grid grid-cols-3 gap-x-3 gap-y-2 max-w-lg border-t border-border pt-6">
+          <div>
+            <dt class="flex items-center gap-1.5 mb-1">
+              <Wallet class="w-4 h-4 text-accent shrink-0" />
+              <span class="font-serif font-bold text-xl text-secondary">100%</span>
+            </dt>
+            <dd class="text-xs text-gray-500 leading-tight">Beasiswa penuh politeknik</dd>
+          </div>
+          <div class="sm:pl-4 sm:border-l border-border">
+            <dt class="flex items-center gap-1.5 mb-1">
+              <BookOpen class="w-4 h-4 text-accent shrink-0" />
+              <span class="font-serif font-bold text-xl text-secondary">2 Bidang</span>
+            </dt>
+            <dd class="text-xs text-gray-500 leading-tight">Tahfizh &amp; keahlian digital</dd>
+          </div>
+          <div class="sm:pl-4 sm:border-l border-border">
+            <dt class="flex items-center gap-1.5 mb-1">
+              <ShieldCheck class="w-4 h-4 text-accent shrink-0" />
+              <span class="font-serif font-bold text-xl text-secondary">24 Jam</span>
+            </dt>
+            <dd class="text-xs text-gray-500 leading-tight">Asrama &amp; pembinaan akhlak</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Arched Desktop Image with Offset Gold backdrop shadow -->
+      <div class="hidden lg:block relative lg:ml-auto w-full max-w-sm aspect-[4/5] animate-on-scroll delay-200">
+        <div class="absolute inset-0 bg-accent/20 rounded-t-[180px] rounded-b-3xl translate-x-4 translate-y-4 -z-10 border border-accent/30"></div>
+        <div class="relative w-full h-full rounded-t-[180px] rounded-b-3xl overflow-hidden border-2 border-accent/30 shadow-2xl bg-primary-dark">
+          <div class="absolute inset-0 bg-gradient-to-t from-secondary/40 via-transparent to-transparent z-10"></div>
+          <div class="absolute inset-0 bg-secondary/10 mix-blend-multiply z-10 transition-opacity hover:opacity-0 duration-500"></div>
+          <img
+            src="/img/pondok-pesantren-tholabie-malang-cibs.webp"
+            alt="Santri Pondok Pesantren THOLABIE CIBS Malang belajar teknologi digital"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-xl z-20 flex justify-between items-center border border-accent/20 animate-float">
+            <div>
+              <p class="text-xs text-primary font-bold uppercase tracking-wider mb-1">Mitra Pendidikan Formal</p>
+              <p class="text-secondary font-bold text-lg">Politeknik Kota Malang</p>
+            </div>
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-accent">
+              <GraduationCap class="w-6 h-6" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating accreditation badge -->
+        <div class="absolute -top-3 -left-3 z-20 inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-sm pl-2.5 pr-3.5 py-2 rounded-full shadow-xl border border-accent/30 animate-float">
+          <span class="flex items-center justify-center w-6 h-6 rounded-full bg-accent text-primary-dark">
+            <GraduationCap class="w-3.5 h-3.5" />
+          </span>
+          <span class="text-xs font-bold text-secondary uppercase tracking-wide leading-none">Tahfizh + Vokasi</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
