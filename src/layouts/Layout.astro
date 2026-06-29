@@ -9,12 +9,14 @@ interface Props {
   title?: string;
   description?: string;
   image?: string;
+  ogType?: 'website' | 'article';
 }
 
 const {
-  title = "Pondok Pesantren THOLABIE CIBS | Beasiswa Politeknik Kota Malang",
+  title = "Pondok Pesantren THOLABIE CIBS - Beasiswa Politeknik Kota Malang",
   description = "Pondok Pesantren THOLABIE Classic International Boarding School. Pendidikan asrama Islami terpadu dengan beasiswa D3 Politeknik Kota Malang dan inkubasi keahlian digital. Menjembatani Iman, Ilmu, dan Karier Masa Depan.",
-  image = "/img/pondok-pesantren-tholabie-malang-cibs.webp"
+  image = "/img/pondok-pesantren-tholabie-malang-cibs.webp",
+  ogType = 'website'
 } = Astro.props;
 
 const canonicalUrl = new URL(Astro.url.pathname, 'https://pesantrentholabie.com').href;
@@ -64,26 +66,30 @@ const breadcrumbSchema = breadcrumbs.length > 1 ? {
   <meta name="title" content={title} />
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalUrl} />
-  
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+
   <!-- Publisher and Author Info -->
   <meta name="author" content="Pondok Pesantren THOLABIE CIBS" />
   <meta name="publisher" content="Pondok Pesantren THOLABIE CIBS" />
   <meta name="copyright" content="Pondok Pesantren THOLABIE CIBS" />
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content={ogType} />
   <meta property="og:url" content={canonicalUrl} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={ogImageUrl} />
+  <meta property="og:image:alt" content={title} />
+  <meta property="og:locale" content="id_ID" />
   <meta property="og:site_name" content="Pondok Pesantren THOLABIE CIBS" />
 
   <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content={canonicalUrl} />
-  <meta property="twitter:title" content={title} />
-  <meta property="twitter:description" content={description} />
-  <meta property="twitter:image" content={ogImageUrl} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content={canonicalUrl} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageUrl} />
+  <meta name="twitter:image:alt" content={title} />
 
   <!-- JSON-LD Structured Data (School Schema) -->
   <script type="application/ld+json" is:raw>
@@ -119,10 +125,21 @@ const breadcrumbSchema = breadcrumbs.length > 1 ? {
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   )}
 
-  <!-- Google Fonts -->
+  <!-- Page-specific head (Article / FAQPage JSON-LD, etc.) -->
+  <slot name="head" />
+
+  <!-- Google Fonts (non-render-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Amiri+Quran&display=swap" rel="stylesheet">
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Amiri+Quran&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'"
+  >
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Amiri+Quran&display=swap">
+  </noscript>
 </head>
 <body class="font-sans text-secondary bg-surface antialiased selection:bg-primary selection:text-white overflow-x-hidden">
   <Navbar />

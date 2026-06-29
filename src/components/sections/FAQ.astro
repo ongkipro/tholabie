@@ -40,6 +40,16 @@ const faqs = [
     a: 'Silakan klik tombol pendaftaran WhatsApp di website ini untuk menghubungi admin penerimaan kami. Admin akan memandu pengumpulan berkas berkas administratif (ijazah, KK, SKTM) dan menjadwalkan tes seleksi wawancara online.',
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((f) => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  })),
+};
 ---
 <section id="faq" class="py-16 md:py-24 bg-surface relative overflow-hidden">
   <div class="absolute inset-0 bg-islamic-pattern opacity-40 -z-10"></div>
@@ -67,4 +77,6 @@ const faqs = [
       ))}
     </div>
   </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 </section>
