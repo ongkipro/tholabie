@@ -5,6 +5,18 @@
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 [![Repository](https://img.shields.io/badge/GitHub-Public-brightgreen?style=for-the-badge&logo=github)](https://github.com/ongkipro/tholabie)
 
+---
+
+<div align="center">
+  <p style="font-size: 1.25rem;">
+    <b>بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</b><br/>
+    <b>مَا شَاءَ اللَّهُ لَا قُوَّةَ إِلَّا بِاللَّهِ</b>
+  </p>
+  <p><i>Semoga website ini menjadi wasilah kebaikan, ilmu yang bermanfaat, dan amal jariyah bagi semua yang terlibat. Aamiin.</i></p>
+</div>
+
+---
+
 Repositori ini berisi kode sumber resmi untuk website company profile **Pondok Pesantren THOLABIE Classic International Boarding School (CIBS) Malang** yang dibangun menggunakan framework modern **Astro** terintegrasi dengan **Tailwind CSS v4**.
 
 Situs ini dirancang khusus untuk menyajikan program beasiswa penuh kuliah 3 tahun D3 Politeknik Kota Malang dan inkubasi keahlian digital bagi santri berprestasi dari seluruh Indonesia.
