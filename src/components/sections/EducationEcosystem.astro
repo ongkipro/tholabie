@@ -76,10 +76,10 @@ const steps = [
               >
                 <Icon class="w-7 h-7" />
               </div>
-              <h3 class={`font-bold ${step.isDark ? 'text-white' : 'text-secondary'} text-sm mb-2 text-center`}>
+              <h3 class={`font-bold ${step.isDark ? 'text-white' : 'text-secondary'} text-sm md:text-base mb-2 text-center`}>
                 {step.title}
               </h3>
-              <p class={`text-xs ${step.isDark ? 'text-gray-300' : 'text-gray-500'} text-center leading-relaxed`}>{step.desc}</p>
+              <p class={`text-xs md:text-sm ${step.isDark ? 'text-gray-300' : 'text-gray-500'} text-center leading-relaxed`}>{step.desc}</p>
             </div>
             {idx < steps.length - 1 && (
               <ArrowDown class="md:hidden text-gray-300 w-6 h-6 my-2 animate-on-scroll" />
