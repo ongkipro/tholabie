@@ -107,7 +107,7 @@ Website ini dikembangkan secara profesional dan dipublikasikan ke publik oleh:
 
 ### 👤 Pengembang Utama (Developer Credentials)
 * **Lead Engineer:** **Paduka Ongki — [ongki.pro](https://ongki.pro)**
-* **Kontak Kerja:** `halo@ongki.pro`
+* **Kontak Kerja:** `get@ongki.pro`
 * **Jasa:** Solusi Web Premium, Konsultan TI, & Transformasi Digital.
 
 ### 🤖 AI Co-Developer Partner
