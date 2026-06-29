@@ -1,7 +1,6 @@
 # 🕌 Pondok Pesantren THOLABIE CIBS — Website Resmi (Astro Version)
 
 [![Developer](https://img.shields.io/badge/Developer-ongki.pro-064E3B?style=for-the-badge&logo=github&logoColor=white)](https://ongki.pro)
-[![AI Co-Developer](https://img.shields.io/badge/AI--Partner-Antigravity%20(DeepMind)-blue?style=for-the-badge&logo=google-gemini&logoColor=white)](https://deepmind.google/)
 [![Astro](https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build/)
 [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
@@ -123,8 +122,5 @@ Website ini dikembangkan secara profesional dan dipublikasikan ke publik oleh:
 * **Lead Engineer:** **Paduka Ongki — [ongki.pro](https://ongki.pro)**
 * **Kontak Kerja:** `get@ongki.pro`
 * **Jasa:** Solusi Web Premium, Konsultan TI, & Transformasi Digital.
-
-### 🤖 AI Co-Developer Partner
-* **Antigravity (Google DeepMind Team):** Agen kecerdasan buatan kelas premium yang bertugas mengarsiteki dinamika multi-page, merancang optimasi performa LCP, integrasi metadata SEO, dan visualisasi layout kaca (*glassmorphic CSS*).
 
 *Hak Cipta dilindungi undang-undang. Dimiliki secara resmi oleh **Pondok Pesantren THOLABIE Classic International Boarding School (CIBS) Malang**.*
