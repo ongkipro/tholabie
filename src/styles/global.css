@@ -62,10 +62,14 @@
   }
 
   .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
     transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     will-change: opacity, transform;
+  }
+  
+  /* Only hide elements when JS has loaded and observer is ready */
+  .js-observer-ready .animate-on-scroll:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(30px);
   }
   
   .animate-on-scroll.is-visible {
