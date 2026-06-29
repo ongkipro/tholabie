@@ -1,5 +1,13 @@
 ---
 import { BadgeCheck, Home, Briefcase, Compass, BookMarked, ClipboardList, Check, ArrowRight } from '@lucide/astro';
+import BenefitCard from './BenefitCard.astro';
+
+const benefits = [
+  { icon: BadgeCheck, title: '100% Bebas Biaya Kuliah', desc: 'Beasiswa penuh selama masa studi program D3 Politeknik Kota Malang.', delay: '' },
+  { icon: Home, title: 'Fasilitas Asrama Islami', desc: 'Akomodasi gratis di lingkungan asrama yang terstruktur untuk membangun karakter Islami.', delay: 'delay-100' },
+  { icon: Briefcase, title: 'Pelatihan Life & Digital Skills', desc: 'Pelatihan ekstrakurikuler intensif dalam bidang digital marketing, pemanfaatan AI, dan kewirausahaan.', delay: 'delay-200' },
+  { icon: Compass, title: 'Pendampingan Karier', desc: 'Bimbingan langsung untuk persiapan memasuki dunia kerja atau memulai bisnis setelah lulus.', delay: 'delay-300' },
+];
 ---
 <section id="beasiswa" class="py-24 bg-primary relative overflow-hidden">
   <div class="absolute top-0 left-0 w-full h-full opacity-10">
@@ -20,26 +28,7 @@ import { BadgeCheck, Home, Briefcase, Compass, BookMarked, ClipboardList, Check,
 
     <div class="grid lg:grid-cols-3 gap-8">
       <div class="lg:col-span-2 grid sm:grid-cols-2 gap-4">
-        <div class="animate-on-scroll bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl text-white hover:bg-white/20 transition-colors">
-          <BadgeCheck class="w-8 h-8 text-accent mb-4" />
-          <h3 class="text-lg font-bold mb-2">100% Bebas Biaya Kuliah</h3>
-          <p class="text-sm text-gray-300">Beasiswa penuh selama masa studi program D3 Politeknik Kota Malang.</p>
-        </div>
-        <div class="animate-on-scroll delay-100 bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl text-white hover:bg-white/20 transition-colors">
-          <Home class="w-8 h-8 text-accent mb-4" />
-          <h3 class="text-lg font-bold mb-2">Fasilitas Asrama Islami</h3>
-          <p class="text-sm text-gray-300">Akomodasi gratis di lingkungan asrama yang terstruktur untuk membangun karakter Islami.</p>
-        </div>
-        <div class="animate-on-scroll delay-200 bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl text-white hover:bg-white/20 transition-colors">
-          <Briefcase class="w-8 h-8 text-accent mb-4" />
-          <h3 class="text-lg font-bold mb-2">Pelatihan Life & Digital Skills</h3>
-          <p class="text-sm text-gray-300">Pelatihan ekstrakurikuler intensif dalam bidang digital marketing, pemanfaatan AI, dan kewirausahaan.</p>
-        </div>
-        <div class="animate-on-scroll delay-300 bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-2xl text-white hover:bg-white/20 transition-colors">
-          <Compass class="w-8 h-8 text-accent mb-4" />
-          <h3 class="text-lg font-bold mb-2">Pendampingan Karier</h3>
-          <p class="text-sm text-gray-300">Bimbingan langsung untuk persiapan memasuki dunia kerja atau memulai bisnis setelah lulus.</p>
-        </div>
+        {benefits.map(b => <BenefitCard icon={b.icon} title={b.title} desc={b.desc} delay={b.delay} />)}
       </div>
 
       <div class="animate-on-scroll delay-400 bg-white rounded-3xl p-8 shadow-2xl relative overflow-hidden text-secondary">

@@ -1,0 +1,16 @@
+---
+export interface Props {
+  icon: any;
+  title: string;
+  desc: string;
+  delay?: string;
+}
+
+const { icon: Icon, title, desc, delay = '' } = Astro.props;
+---
+
+<div class={`animate-on-scroll ${delay} bg-white p-5 rounded-2xl border border-gray-100 text-center shadow-sm hover:shadow-md transition-shadow`}>
+  <Icon class="w-8 h-8 mx-auto text-accent mb-3" />
+  <h4 class="font-bold text-sm mb-1 text-secondary">{title}</h4>
+  <p class="text-xs text-gray-500">{desc}</p>
+</div>

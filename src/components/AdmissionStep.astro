@@ -1,0 +1,16 @@
+---
+export interface Props {
+  step: number;
+  title: string;
+  desc: string;
+  delay?: string;
+}
+
+const { step, title, desc, delay = '' } = Astro.props;
+---
+
+<div class={`animate-on-scroll ${delay} bg-surface p-6 rounded-2xl border border-gray-200 relative text-center shadow-sm`}>
+  <div class="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center absolute -top-5 left-1/2 -translate-x-1/2 border-4 border-white shadow-md">{step}</div>
+  <h4 class="font-bold text-secondary mt-5 mb-2">{title}</h4>
+  <p class="text-sm text-gray-500">{desc}</p>
+</div>
