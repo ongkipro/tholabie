@@ -1,0 +1,209 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import { Calendar, User, Clock } from '@lucide/astro';
+
+interface Article {
+  slug: string;
+  title: string;
+  category: string;
+  date: string;
+  author: string;
+  readTime: string;
+  excerpt: string;
+  content: string;
+}
+
+export async function getStaticPaths() {
+  const articles: Article[] = [
+    {
+      slug: 'literasi-ai-santri-era-digital',
+      title: 'Pentingnya Literasi AI bagi Santri Abad 21: Menyeimbangkan Iman dan Teknologi',
+      category: 'Teknologi',
+      date: '2026-06-25',
+      author: 'Ustadz Pembina',
+      readTime: '7 min read',
+      excerpt: 'Di era kecerdasan buatan, santri tidak boleh gagap teknologi. Ketahui bagaimana Tholabie CIBS memadukan pengajaran AI dengan pembiasaan adab dan akhlak islami.',
+      content: `
+        <p class="lead">Di era kecerdasan buatan (AI) yang semakin mendominasi lanskap pekerjaan dan pendidikan global, muncul kekhawatiran di kalangan pendidik Islam: bagaimana pesantren menyikapi gelombang teknologi ini tanpa kehilangan jati diri spiritualnya?</p>
+        
+        <h2>Kecerdasan Buatan dan Masa Depan Santri</h2>
+        <p>Menurut laporan World Economic Forum 2025, 85 juta pekerjaan akan tergantikan oleh otomatisasi, namun 97 juta peran baru akan muncul — sebagian besar di bidang yang memerlukan literasi teknologi dan kecerdasan buatan. Bagi lulusan pesantren yang selama ini hanya dibekali ilmu agama tanpa keterampilan digital, situasi ini menjadi ancaman sekaligus peluang.</p>
+        <p>Pondok Pesantren THOLABIE CIBS memandang fenomena ini bukan sebagai ancaman, melainkan sebagai panggilan dakwah di era modern. Kami percaya bahwa menguasai teknologi bukan hanya soal mencari nafkah, tetapi juga bagian dari menjalankan perintah Allah untuk menjadi khalifah yang memakmurkan bumi dengan ilmu pengetahuan.</p>
+        
+        <h2>Pendekatan Tholabie: AI dengan Bingkai Akhlak</h2>
+        <p>Di kelas inkubasi sore hari, santri Tholabie belajar memanfaatkan berbagai tools kecerdasan buatan — mulai dari ChatGPT untuk riset materi dakwah, Claude untuk analisis data, hingga platform AI image generation untuk konten kreatif. Namun yang membedakan adalah: setiap sesi selalu dimulai dengan pengingat adab.</p>
+        
+        <blockquote>"Ilmu tanpa adab adalah kesia-siaan, sedangkan teknologi tanpa iman adalah malapetaka."</blockquote>
+        
+        <p>Santri diajarkan tiga prinsip utama saat menggunakan AI:</p>
+        <ol>
+          <li><strong>Niat yang Lurus:</strong> Menggunakan AI untuk kemaslahatan, bukan untuk menipu, memalsukan karya, atau menyebarkan informasi bohong.</li>
+          <li><strong>Verifikasi Ilmiah:</strong> Output AI bukanlah kebenaran mutlak. Santri wajib memverifikasi setiap klaim faktual dengan sumber primer yang terpercaya.</li>
+          <li><strong>Produktivitas, Bukan Ketergantungan:</strong> AI adalah alat bantu, bukan pengganti akal manusia. Santri tetap harus mengasah kemampuan berpikir kritis dan analitis secara mandiri.</li>
+        </ol>
+
+        <h2>Proyek Nyata: AI untuk Dakwah Digital</h2>
+        <p>Salah satu proyek unggulan santri Tholabie adalah memanfaatkan AI untuk membuat konten dakwah digital — mulai dari poster quotes Islami hingga video pendek tafsir Al-Qur'an yang diunggah ke media sosial. Dengan tools AI, satu santri bisa memproduksi konten berkualitas dalam waktu singkat, memperluas jangkauan dakwah ke audiens yang lebih luas.</p>
+
+        <h2>Kesimpulan</h2>
+        <p>Santri masa kini tidak bisa lagi memilih antara "belajar agama" atau "belajar teknologi." Keduanya harus berjalan seiring. Di Tholabie CIBS, kami membuktikan bahwa pesantren bisa menjadi pusat inovasi digital tanpa kehilangan ruh spiritualnya — karena teknologi hanyalah alat, dan imanlah yang menjadi kompasnya.</p>
+      `
+    },
+    {
+      slug: 'panduan-beasiswa-politeknik-sktm',
+      title: 'Jalur Beasiswa Penuh D3 Politeknik Malang: Panduan Persiapan SKTM & Raport',
+      category: 'Pendidikan',
+      date: '2026-06-20',
+      author: 'Tim Admisi',
+      readTime: '5 min read',
+      excerpt: 'Persiapkan berkas seleksi beasiswa Tholabie Anda sedini mungkin. Berikut panduan lengkap menyusun berkas raport semester 1-5 dan SKTM resmi kelurahan.',
+      content: `
+        <p class="lead">Program beasiswa penuh Tholabie CIBS membuka pintu pendidikan tinggi bagi santri berprestasi dari keluarga prasejahtera. Agar peluang lolos seleksi semakin besar, persiapan berkas administrasi yang rapi dan lengkap menjadi kunci utama.</p>
+        
+        <h2>Langkah 1: Menyiapkan Raport Akademik</h2>
+        <p>Tim seleksi Tholabie akan menilai konsistensi nilai akademik Anda selama menempuh pendidikan di bangku SMA/SMK/MA sederajat. Berikut hal yang perlu diperhatikan:</p>
+        <ul>
+          <li>Siapkan scan atau foto berwarna dari raport asli semester 1 hingga semester 5.</li>
+          <li>Pastikan tidak ada nilai mata pelajaran utama (Matematika, Bahasa Inggris, Bahasa Indonesia) yang berada di bawah Kriteria Ketuntasan Minimal (KKM).</li>
+          <li>Jika terdapat nilai yang kurang memuaskan di semester awal namun menunjukkan tren peningkatan, lampirkan surat keterangan prestasi non-akademik sebagai nilai tambah.</li>
+        </ul>
+
+        <h2>Langkah 2: Mengurus Surat Keterangan Tidak Mampu (SKTM)</h2>
+        <p>Karena beasiswa ini dikhususkan bagi keluarga prasejahtera, SKTM menjadi dokumen wajib yang tidak bisa dinegosiasikan. Berikut alur pengurusannya:</p>
+        <ol>
+          <li>Mintalah surat pengantar dari Ketua RT/RW setempat yang menyatakan bahwa keluarga Anda termasuk dalam kategori kurang mampu secara ekonomi.</li>
+          <li>Bawa surat pengantar tersebut ke kantor Kelurahan/Desa domisili Anda untuk diterbitkan SKTM resmi yang ditandatangani oleh Lurah/Kepala Desa.</li>
+          <li>Jika Anda memiliki Kartu Indonesia Pintar (KIP) atau Kartu Keluarga Sejahtera (KKS), sertakan sebagai dokumen pendukung yang akan memperkuat berkas seleksi Anda.</li>
+        </ol>
+
+        <h2>Langkah 3: Mengunggah Berkas ke Google Drive</h2>
+        <p>Setelah semua dokumen siap, gabungkan menjadi satu folder di Google Drive Anda. Pastikan Anda mengatur akses folder menjadi "Siapa saja yang memiliki link dapat melihat" (Public). Kemudian salin tautan folder tersebut dan tempelkan pada formulir pendaftaran online Tholabie.</p>
+
+        <h2>Tips Tambahan dari Tim Seleksi</h2>
+        <ul>
+          <li>Gunakan scanner atau aplikasi scan dokumen (seperti CamScanner) agar hasil scan berkas terlihat profesional dan mudah dibaca.</li>
+          <li>Beri nama file dengan format yang jelas, misalnya: <code>NamaAnda_Raport_Semester1.pdf</code></li>
+          <li>Jangan menunggu hingga batas akhir pendaftaran. Kuota beasiswa hanya 30 kursi dan seleksi dilakukan secara bergulir.</li>
+        </ul>
+      `
+    },
+    {
+      slug: 'adab-menuntut-ilmu-era-digital',
+      title: 'Menjaga Adab Menuntut Ilmu di Tengah Gemuruh Era Digital',
+      category: 'Keislaman',
+      date: '2026-06-15',
+      author: 'Dewan Asrama',
+      readTime: '6 min read',
+      excerpt: 'Adab mendahului ilmu. Menelaah bagaimana santri Tholabie melatih disiplin spiritual, menjaga pandangan, serta meluruskan niat belajar di era keterbukaan internet.',
+      content: `
+        <p class="lead">Para ulama salaf terdahulu selalu menekankan satu kaidah fundamental dalam menuntut ilmu: adab harus didahulukan sebelum penguasaan materi. Di era digital saat informasi melimpah dalam hitungan detik, menjaga adab menjadi tantangan yang jauh lebih berat bagi generasi muda Muslim.</p>
+        
+        <h2>Mengapa Adab Sangat Penting di Era Internet?</h2>
+        <p>Internet memudahkan kita mengakses jutaan kitab, artikel ilmiah, dan rekaman kajian ulama hanya dengan beberapa ketukan jari. Namun, kemudahan ini seringkali melahirkan penyakit hati yang halus: meremehkan proses belajar, hilangnya rasa takzim kepada guru, dan tumbuhnya kesombongan intelektual karena merasa "sudah tahu segalanya dari Google."</p>
+
+        <blockquote>"Kami mempelajari adab selama tiga puluh tahun, dan kami mempelajari ilmu selama dua puluh tahun." — Abdullah bin Mubarak</blockquote>
+
+        <h2>Penerapan Adab di Asrama Tholabie CIBS</h2>
+        <p>Untuk mengimbangi keahlian digital yang diajarkan, asrama Tholabie menerapkan aturan kedisiplinan dan adab yang ketat namun penuh kasih sayang:</p>
+        
+        <h3>1. Menjaga Waktu dari Perbuatan Sia-Sia</h3>
+        <p>Santri dijauhkan dari budaya scrolling tanpa tujuan, binge-watching konten hiburan, dan bermain game online. Sebagai gantinya, waktu luang diisi dengan murojaah hafalan Al-Qur'an, membaca kitab, atau mengerjakan proyek inkubasi bisnis digital yang produktif.</p>
+        
+        <h3>2. Takzim kepada Asatidzah</h3>
+        <p>Meskipun santri memiliki akses ke informasi digital, mereka tetap diajarkan untuk merendahkan hati dan menghormati guru secara langsung. Mendengarkan kajian diniyah malam hari dengan penuh konsentrasi — tanpa memegang perangkat mobile — adalah bagian dari latihan adab yang tidak tergantikan oleh teknologi.</p>
+        
+        <h3>3. Meluruskan Niat Belajar</h3>
+        <p>Setiap pagi sebelum memulai aktivitas, santri diingatkan untuk meluruskan niat: belajar bukan untuk mengejar ijazah semata, bukan untuk pamer keahlian, melainkan untuk mendekatkan diri kepada Allah dan memberi manfaat bagi umat.</p>
+      `
+    },
+    {
+      slug: 'peluang-bisnis-dropship-santri',
+      title: 'Peluang Bisnis Dropship Lokal untuk Kemandirian Finansial Santri',
+      category: 'Bisnis',
+      date: '2026-06-10',
+      author: 'Mentor Industri',
+      readTime: '5 min read',
+      excerpt: 'Bagaimana santri Tholabie diajarkan merintis bisnis e-commerce dropship tanpa modal besar di asrama, melatih mental mandiri secara finansial sejak dini.',
+      content: `
+        <p class="lead">Kemandirian ekonomi adalah salah satu target besar lulusan Tholabie CIBS. Kami meyakini bahwa santri yang berdaya secara finansial akan lebih leluasa memberikan manfaat bagi agama dan masyarakat — tanpa harus bergantung sepenuhnya pada lowongan kerja formal yang semakin kompetitif.</p>
+
+        <h2>Mengapa Memilih Bisnis Dropship Lokal?</h2>
+        <p>Dropship lokal menawarkan tiga keunggulan utama bagi santri pemula:</p>
+        <ol>
+          <li><strong>Tanpa Modal Stok Barang:</strong> Santri hanya menjadi perantara pemasaran antara supplier lokal dengan pembeli online. Tidak perlu menyetok barang, tidak ada risiko barang tidak laku.</li>
+          <li><strong>Fleksibilitas Waktu:</strong> Bisnis bisa dijalankan di sela-sela jam kuliah formal dan kegiatan asrama, cukup dengan smartphone dan koneksi internet.</li>
+          <li><strong>Skalabilitas Cepat:</strong> Setelah menemukan produk yang tepat dan strategi pemasaran yang efektif, bisnis dropship bisa diskalakan dengan cepat ke berbagai platform marketplace.</li>
+        </ol>
+
+        <h2>Kurikulum Inkubasi Bisnis di Tholabie</h2>
+        <p>Berbeda dengan pelatihan bisnis pada umumnya, kurikulum inkubasi Tholabie dirancang dengan pendekatan praktis dan terukur:</p>
+        <ul>
+          <li><strong>Riset Produk Terlaris:</strong> Santri belajar menganalisis tren pasar menggunakan tools gratis seperti Google Trends, TikTok Creative Center, dan analisis kompetitor di Shopee/Tokopedia.</li>
+          <li><strong>Copywriting Penjualan:</strong> Membuat deskripsi produk yang persuasif, headline yang memicu rasa penasaran, dan kalimat penawaran yang mendorong konversi pembeli.</li>
+          <li><strong>Optimasi Toko Online:</strong> Menyusun tampilan etalase produk yang profesional, mengatur kategorisasi yang rapi, dan memaksimalkan fitur voucher/diskon platform.</li>
+          <li><strong>Iklan Berbayar Mikro:</strong> Santri dilatih mengelola budget iklan kecil (Rp 10.000 - Rp 50.000 per hari) di platform Meta Ads untuk mendatangkan traffic pembeli potensial.</li>
+        </ul>
+
+        <h2>Testimoni Santri: Dari Nol ke Omset Pertama</h2>
+        <p>Ahmad, santri semester 5 program D3 Teknik Informatika, memulai bisnis dropship produk fashion muslim dari supplier lokal Malang. Dalam waktu 3 bulan, ia berhasil menghasilkan omset rata-rata Rp 2,5 juta per bulan — cukup untuk membiayai kebutuhan pribadinya tanpa membebani orang tua.</p>
+        <p>"Dulu saya tidak pernah membayangkan bisa punya penghasilan sendiri sambil kuliah. Di Tholabie, saya tidak cuma diajari teori bisnis, tapi langsung praktik dengan bimbingan mentor yang sudah berpengalaman," ungkapnya.</p>
+      `
+    }
+  ];
+
+  return articles.map(article => ({
+    params: { slug: article.slug },
+    props: { article }
+  }));
+}
+
+const { article } = Astro.props;
+---
+
+<Layout title={`${article.title} — Blog Tholabie CIBS`}>
+  <Navbar />
+  
+  <main class="flex-grow py-20 bg-white">
+    <div class="mx-auto max-w-3xl px-6 lg:px-8">
+      
+      <a href="/blog" class="inline-flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-primary transition-colors uppercase tracking-wider mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left w-4 h-4"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        Kembali ke Blog
+      </a>
+
+      <header class="space-y-4 mb-10 pb-8 border-b border-gray-100">
+        <span class="inline-block bg-primary text-white text-[10px] font-bold px-2.5 py-0.5 rounded border border-emerald-800 uppercase tracking-widest">
+          {article.category}
+        </span>
+        
+        <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-secondary leading-tight">
+          {article.title}
+        </h1>
+
+        <div class="flex flex-wrap gap-4 text-xs text-slate-400 font-semibold uppercase tracking-wider pt-2">
+          <span class="flex items-center gap-1.5"><Calendar class="w-3.5 h-3.5" />{article.date}</span>
+          <span class="flex items-center gap-1.5"><User class="w-3.5 h-3.5" />{article.author}</span>
+          <span class="flex items-center gap-1.5"><Clock class="w-3.5 h-3.5" />{article.readTime}</span>
+        </div>
+      </header>
+
+      <article class="prose prose-slate max-w-none text-slate-700 leading-relaxed font-sans text-sm sm:text-base space-y-6
+        prose-headings:font-serif prose-headings:text-secondary prose-headings:font-bold
+        prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+        prose-h3:text-lg prose-h3:mt-8 prose-h3:mb-3
+        prose-p:leading-relaxed
+        prose-ul:list-disc prose-ul:pl-6 prose-ul:space-y-2
+        prose-ol:list-decimal prose-ol:pl-6 prose-ol:space-y-2
+        prose-blockquote:border-l-4 prose-blockquote:border-accent prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-slate-500 prose-blockquote:my-6
+        prose-li:my-1
+        prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:text-primary-dark
+        prose-strong:text-secondary"
+        set:html={article.content}
+      />
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
