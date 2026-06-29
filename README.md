@@ -33,14 +33,13 @@ Situs ini dirancang khusus untuk menyajikan program beasiswa penuh kuliah 3 tahu
    * **Asrama (`/asrama`):** Rutinitas ritme harian santri (dari Qiyamul Lail hingga inkubasi), fasilitas asrama, dan galeri dokumentasi.
    * **Kurikulum (`/kurikulum`):** Pembahasan 4 pilar keahlian digital (AI, Pemasaran Digital, Toko Online, Desain) dan *soft skills*.
    * **Hubungi Kami (`/kontak`):** Alamat resmi, peta interaktif, jam operasional, saluran WhatsApp, dan tanya jawab lengkap (FAQ).
-2. **Kanal Blog Interaktif (`/blog`):** Dilengkapi dengan halaman index blog dan detail artikel dinamis berdaya jangkau luas untuk menyajikan berita, tips pendidikan, dan literasi teknologi digital bagi santri.
-3. **Navigasi Mobile Floating Glass Card:** Tombol menu burger melingkar kaca (*glass circle*) dengan animasi morphing 3-garis murni, serta menu dropdown melayang (*floating rounded-2xl glass card*) dengan chevrons dinamis.
-4. **Navigasi Rekam Jejak (Breadcrumbs):** Elemen navigasi kapsul transparan visual (Beranda • Nama Sub-halaman) di atas header sub-halaman untuk mempermudah navigasi balik.
-5. **Optimasi SEO & Kecepatan Akses:**
+2. **Navigasi Mobile Floating Glass Card:** Tombol menu burger melingkar kaca (*glass circle*) dengan animasi morphing 3-garis murni, serta menu dropdown melayang (*floating rounded-2xl glass card*) dengan chevrons dinamis.
+3. **Navigasi Rekam Jejak (Breadcrumbs):** Elemen navigasi kapsul transparan visual (Beranda • Nama Sub-halaman) di atas header sub-halaman untuk mempermudah navigasi balik.
+4. **Optimasi SEO & Kecepatan Akses:**
    * **Tag Meta Dinamis:** Canonical URL, properti sosial Open Graph (Facebook), dan Twitter Card ter-generate dinamis berbasis jalur URL sub-halaman saat ini.
    * **Unique Meta Descriptions:** Menghilangkan warning duplikasi deskripsi di mata robot pencari Google.
    * **JSON-LD Structured Data:** Skema terstruktur untuk `School` (profil sekolah) dan `BreadcrumbList` (rekam jejak penelusuran) guna menaikkan *rich snippets* di hasil pencarian.
-   * **Sitemap Dinamis (`sitemap.xml`):** Pendaftaran otomatis ke-6 sub-halaman utama dan indeks blog secara tertib.
+   * **Sitemap Dinamis (`sitemap.xml`):** Pendaftaran otomatis ke-6 sub-halaman utama secara tertib.
    * **Preloading Aset:** Prioritas muat untuk gambar Visual Hero untuk memangkas metrik LCP (Largest Contentful Paint).
 
 ---
@@ -77,9 +76,6 @@ Situs ini dirancang khusus untuk menyajikan program beasiswa penuh kuliah 3 tahu
 │   ├── layouts/
 │   │   └── Layout.astro         # Template dasar HTML, dynamic SEO meta, dan JSON-LD
 │   ├── pages/
-│   │   ├── blog/                # Fitur blog terintegrasi
-│   │   │   ├── index.astro      # Indeks daftar artikel blog
-│   │   │   └── [slug].astro     # Detail bacaan postingan blog dinamis
 │   │   ├── index.astro          # Halaman beranda
 │   │   ├── tentang.astro        # Halaman Profil
 │   │   ├── beasiswa.astro       # Halaman Program Beasiswa
