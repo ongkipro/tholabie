@@ -116,7 +116,7 @@ Website ini dikembangkan secara profesional dan dipublikasikan ke publik oleh:
 
 ### 👤 Pengembang Utama (Developer Credentials)
 * **Lead Engineer:** **Paduka Ongki — [ongki.pro](https://ongki.pro)**
-* **Kontak Kerja:** `get@ongki.pro`
+* **Kontak Kerja:** melalui [ongki.pro](https://ongki.pro)
 * **Jasa:** Solusi Web Premium, Konsultan TI, & Transformasi Digital.
 
 *Hak Cipta dilindungi undang-undang. Dimiliki secara resmi oleh **Pondok Pesantren THOLABIE Classic International Boarding School (CIBS) Malang**.*
