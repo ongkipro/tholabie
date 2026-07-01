@@ -120,9 +120,21 @@ npm run preview
 
 <div align="center">
 
-**Crafted by [Ongki](https://ongki.pro)**
+[![Portfolio](https://img.shields.io/badge/ongki.pro-064E3B?style=for-the-badge&logo=safari&logoColor=white)](https://ongki.pro)
+[![GitHub](https://img.shields.io/badge/ongkipro-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ongkipro)
 
-🛒 `Shopify` · 🌐 `Web Development` · 📢 `Meta Ads` · 🔍 `Google Ads` · 📈 `SEO` · ☁️ `Cloudflare` · ⚡ `Automation`
+**Full-Stack Developer · Digital Marketer**
+
+| | |
+|---|---|
+| 🛒 **E-commerce** | `Shopify` `Liquid` `Storefront API` `Headless` |
+| 🌐 **Web** | `Astro` `React` `Next.js` `Tailwind CSS` `TypeScript` |
+| 📢 **Advertising** | `Meta Ads` `Google Ads` |
+| 📈 **SEO** | `Technical` `Local` `Ecommerce` `Content` |
+| ☁️ **Infrastructure** | `Cloudflare` `D1` `R2` `VPS` `Supabase` |
+| ⚡ **Automation** | `AI Agents` `Workflows` `Scraping` `SOPs` |
+
+🇮🇩 Indonesia
 
 </div>
 
