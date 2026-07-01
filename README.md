@@ -120,21 +120,23 @@ npm run preview
 
 <div align="center">
 
-[![Portfolio](https://img.shields.io/badge/ongki.pro-064E3B?style=for-the-badge&logo=safari&logoColor=white)](https://ongki.pro)
-[![GitHub](https://img.shields.io/badge/ongkipro-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ongkipro)
+<a href="https://ongki.pro"><img src="https://img.shields.io/badge/ongki.pro-064E3B?style=flat-square&logo=safari&logoColor=white" /></a>
+<a href="https://github.com/ongkipro"><img src="https://img.shields.io/badge/ongkipro-181717?style=flat-square&logo=github&logoColor=white" /></a>
 
-**Full-Stack Developer · Digital Marketer**
+<br/>
+<br/>
 
-| | |
-|---|---|
-| 🛒 **E-commerce** | `Shopify` `Liquid` `Storefront API` `Headless` |
-| 🌐 **Web** | `Astro` `React` `Next.js` `Tailwind CSS` `TypeScript` |
-| 📢 **Advertising** | `Meta Ads` `Google Ads` |
-| 📈 **SEO** | `Technical` `Local` `Ecommerce` `Content` |
-| ☁️ **Infrastructure** | `Cloudflare` `D1` `R2` `VPS` `Supabase` |
-| ⚡ **Automation** | `AI Agents` `Workflows` `Scraping` `SOPs` |
-
+**Full-Stack Developer · Digital Marketer**  
 🇮🇩 Indonesia
+
+<br/>
+
+| 🛒 E&#8209;commerce | 🌐 Web | 📢 Advertising | 📈 SEO | ☁️ Infrastructure | ⚡ Automation |
+|:---|:---|:---|:---|:---|:---|
+| `Shopify` | `Astro` | `Meta Ads` | `Technical` | `Cloudflare` | `AI Agents` |
+| `Liquid` | `React` | `Google Ads` | `Local` | `D1` `R2` | `Workflows` |
+| `Storefront API` | `Next.js` | | `Ecommerce` | `VPS` | `Scraping` |
+| `Headless` | `Tailwind CSS` | | `Content` | `Supabase` | `SOPs` |
 
 </div>
 
