@@ -8,11 +8,6 @@
 ---
 
 <div align="center">
-  <p style="font-size: 1.25rem;">
-    <b>بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</b><br/>
-    <b>مَا شَاءَ اللَّهُ لَا قُوَّةَ إِلَّا بِاللَّهِ</b>
-  </p>
-<div align="center">
   <div style="background-color: #064e3b; padding: 20px 28px; border-radius: 12px; border: 1px solid #d4af37; display: inline-block;">
     <p style="font-size: 1.3rem; color: #fdfbf7; margin: 0 0 10px;">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
     <p style="font-size: 1.05rem; color: #d4af37; font-weight: bold; margin: 0 0 6px;">🕌 Saya Wakafkan</p>
@@ -116,13 +111,15 @@ npm run preview
 
 ---
 
-## 🤝 Lisensi & Pengembang
+## 🤝 Developer
 
-Website ini dikembangkan secara profesional dan dipublikasikan ke publik oleh:
+Crafted by **[Ongki](https://ongki.pro)**
 
-### 👤 Pengembang Utama (Developer Credentials)
-* **Lead Engineer:** **Paduka Ongki — [ongki.pro](https://ongki.pro)**
-* **Kontak Kerja:** melalui [ongki.pro](https://ongki.pro)
-* **Jasa:** Solusi Web Premium, Konsultan TI, & Transformasi Digital.
+`Shopify` `Web Development` `Meta Ads` `Google Ads` `SEO` `Cloudflare` `Automation`
 
-*Hak Cipta dilindungi undang-undang. Dimiliki secara resmi oleh **Pondok Pesantren THOLABIE Classic International Boarding School (CIBS) Malang**.*
+---
+
+## 📄 License
+
+© 2026 **Pondok Pesantren THOLABIE Classic International Boarding School (CIBS) Malang**. All rights reserved.  
+Proprietary code — not for redistribution.
